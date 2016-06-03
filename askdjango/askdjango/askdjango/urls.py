@@ -6,10 +6,8 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^home/', include('home.urls', namespace='home')),
     url(r'^accounts/', include('accounts.urls')),
-    url(r'^$', lambda request: redirect('blog:index')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
