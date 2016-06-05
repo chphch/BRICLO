@@ -51,9 +51,17 @@
                                 <li class="mbr-navbar__item">
                                     <a class="mbr-buttons__link btn text-white" href="{% url "home:faq" %}">FAQS</a>
                                 </li>
+                                {% if user.is_authenticated %}
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="blog.html">Login</a>
+                                    <a class="mbr-buttons__link btn text-white" href="{% url 'logout' %}">LOGOUT</a>
                                 </li>
+                                
+                                {% else %}
+                                
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="{% url 'login' %}">Login</a>
+                                </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </nav>

@@ -1,47 +1,77 @@
+import re
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, SetPasswordForm, PasswordChangeForm
+from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
+from django.utils.translation import ugettext_lazy as _
+from .models import Profile
+GENDER_CHOICES = (
+            ('MEN' , 'MEN'),
+            ('WOMEN' , 'WOMEN'),
+        )
+SIZE_CHOICES = (
+    ('S','S'),
+    ('M','M'),
+    ('L','L'),
+    ('XL','XL'),
+    ('XXL','XXL'),
+    ('XXXL','XXXL'),
+    )
 
 
-class SignupForm(UserCreationForm):
-    class Meta(UserCreationForm.Meta):
-        fields = ("username", "email")
 
+def phone_validator(value):
+    number = ''.join(re.findall(r'\d+', value))
+    return RegexValidator(r'^01[016789]\d{7,8}$', message='번호를 입력해주세요')(number)
 
 class SignupForm2(UserCreationForm):
-    email = forms.EmailField()
+	email = forms.EmailField()
+
+	def save(self, commit=True):
+		user = super(SignupForm2, self).save(commit=False)
+		user.email = self.cleaned_data['email']
+		if commit:
+			user.save()
+		return user
+
+class SignupForm(UserCreationForm):
+    username = forms.CharField(label='아이디')
+    password1 = forms.CharField(label='비밀번호', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='비밀번호 확인', widget=forms.PasswordInput)
+    name = forms.CharField(label='이름')
+    email = forms.EmailField(label='이메일')   
+    phone = forms.CharField(label='휴대폰 번호', widget=forms.TextInput(attrs={'placeholder': 'ex) 010-1234-5678'}), validators=[phone_validator])
+    adress = forms.CharField(label='주소')
+    gender= forms.ChoiceField(label='성별', choices = GENDER_CHOICES)
+    top_size = forms.ChoiceField(label='상의사이즈', choices = SIZE_CHOICES)
+    bottom_size = forms.ChoiceField(label='하의사이즈', choices = SIZE_CHOICES)
+    is_agree = forms.BooleanField(label='약관동의', error_messages={
+        'required' : '약관동의를 해주셔야 가입이 됩니다.',
+    })
+
+    error_messages = {
+        'password_mismatch': _("비밀번호가 일치하지 않습니다."),
+    }
 
     def save(self, commit=True):
-        user = super(SignupForm2, self).save(commit=False)
-        user.email = self.cleaned_data['email']
+        user = super(SignupForm, self).save(commit=False)
         if commit:
             user.save()
+            user.profile.name = self.cleaned_data['name']
+
+            user.profile.adress = self.cleaned_data['adress']
+            user.profile.gender = self.cleaned_data['gender']
+
+            user.profile.top_size = self.cleaned_data['top_size']
+            user.profile.bottom_size = self.cleaned_data['bottom_size']
+            user.profile.email = self.cleaned_data['email']
+            user.profile.phone = self.cleaned_data['phone']
+            user.profile.save()
         return user
 
-
-def answer_validator(value):
-    if value != 6:
-        raise forms.ValidationError('땡~!!!')
-
-
 class LoginForm(AuthenticationForm):
-    answer = forms.IntegerField(label='3+3=?')#, validators=[answer_validator])
+    username = forms.CharField(label='아이디')
+    password = forms.CharField(label='비밀번호', widget=forms.PasswordInput())
 
-    def clean_answer(self):
-        '특정 필드에 대한 유효성 검사 및 값 변환'
-        answer = self.cleaned_data.get('answer', None)
-        if answer:
-            if answer != 6:
-                raise forms.ValidationError('땡~!!!!!!')
-        return answer
 
-    '''
-    def clean(self):
-        '다수 필드에 대한 유효성 검사 및 값 변환'
-        username = self.cleaned_data.get('username', None)
-        answer = self.cleaned_data.get('answer', None)
-        if username and answer:
-            if len(username) % 2 == 0 and answer % 2 == 0:
-                raise forms.ValidationError('홀수로 입력하라구 !!!')
-        return self.cleaned_data
-    '''
