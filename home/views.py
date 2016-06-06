@@ -1,11 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.utils import timezone
+from .forms import StartForm
 
 
 def main(request):
 	return render(request, 'home/main.html', )
 
+def start(request):
+	if request.method == "POST":
+		form = StartForm(request.POST)
+		if form.is_valid():
+			post = form.save(commit=False)
+			post.author = request.user
+			post.published_date = timezone.now()
+			post.save()
+			return redirect('home.views.main')
+	else:
+			form = StartForm()
+	return render(request, 'home/start.html', {'form': form})
+
 def faq(request):
-	return render(request, 'home/index.html')
+	return render(request, 'home/index.html', )
 
 def faq_detail1(request):
 	return render(request, 'home/question1.html', )

@@ -1,0 +1,22 @@
+h3 {
+	color:black !important;
+}
+#menu-74.mbr-navbar--stuck .mbr-navbar__section {
+  background: #f6f6f6 !important;
+}
+
+
+/*로고, 로고옆글씨 클때*/
+.mbr-navbar__brand-link:after,
+.mbr-navbar__brand-img {
+    height: 40px;
+    margin-left: 8px;
+}
+
+/* 로고옆 글씨 작을때 */
+.mbr-navbar--short .mbr-navbar__brand-link:after,
+.mbr-navbar--short .mbr-navbar__brand-img {
+    height: 30px;
+    margin-left:3px;
+}
+
