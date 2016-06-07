@@ -1,3 +1,7 @@
+@font-face{font-family:'NanumBarunpenB'; src:url('NanumBarunpenB.ttf')}
+ 
+.caption {font-family:NanumBarunpenB;}
+
 h3 {
 	color:black !important;
 }
@@ -20,3 +24,37 @@ h3 {
     margin-left:3px;
 }
 
+.mbr-buttons__btn,
+.mbr-buttons__link,
+.mbr-buttons__btn:hover,
+.mbr-buttons__link:hover {
+    text-decoration: none;
+    color:black;
+}
+#whatis {
+	position:relative !important;
+	top:-8rem !important;
+}
+#blank {
+	height:80px;
+	background-color:white;
+}
+#slider2-78 {
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+.ttitle {
+    text-align:center;
+}
+
+@media (min-width: 992px)
+.getstart_col {
+    float: left;
+    width: 33% !important;
+}
+
+@media (min-width: 768px)
+.getstart_col {
+    float: left;
+    width: 80%;
+}
