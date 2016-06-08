@@ -1,0 +1,41 @@
+{% extends "home/base.html" %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+<style type="text/css">
+        #briclo{
+            margin-left:35%;
+            font-size : 180%;
+        }
+        #sign_up{
+            margin-top:10%;
+        }
+</style>
+<div class="container" id="sign_up">
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    
+
+{{user.username}}
+{{user.profile.name}}
+
+{{user.profile.gender}}
+
+{{user.profile.top_size}}
+
+{{user.profile.bottom_size}}
+
+{{user.profile.adress}}
+
+{{user.profile.phone}}
+
+
+{{user.profile.email}}
+
+
+    </div>
+    </div>
+</div>
+{% endblock %}

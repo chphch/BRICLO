@@ -58,6 +58,9 @@
                                     <a class="mbr-buttons__link btn text-white" href="{% url 'logout' %}">LOGOUT</a>
                                 </li>
                                 
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="{% url 'home:profile' user.pk%}">{{user.username}}님</a>
+                                </li>
                                 {% else %}
                                 
                                 <li class="mbr-navbar__item">

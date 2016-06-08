@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^faq/$', views.faq, name='faq'),
+    url(r'^profile/(?P<user_pk>\d+)/$', views.profile, name='profile'),
     url(r'^start/$', views.start, name='start'),
     url(r'^faq/1/$', views.faq_detail1, name='faq_detail1'),
     url(r'^faq/2/$', views.faq_detail2, name='faq_detail2'),
