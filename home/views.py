@@ -56,7 +56,34 @@ def faq_detail15(request):
 	return render(request, 'home/question15.html', )
 
 @login_required(login_url='/accounts/login/')
-def start(request):
+def start_street(request):
+	if request.method == "POST":
+		form = StartForm(request.POST)
+		if form.is_valid():
+			post = form.save(commit=False)
+			post.author = request.user
+			post.published_date = timezone.now()
+			post.style = 
+			post.save()
+			return redirect('home.views.main')
+	else:
+			form = StartForm()
+	return render(request, 'home/start.html', {'form': form})
+
+def start_casual(request):
+	if request.method == "POST":
+		form = StartForm(request.POST)
+		if form.is_valid():
+			post = form.save(commit=False)
+			post.author = request.user
+			post.published_date = timezone.now()
+			post.save()
+			return redirect('home.views.main')
+	else:
+			form = StartForm()
+	return render(request, 'home/start.html', {'form': form})
+
+def start_both(request):
 	if request.method == "POST":
 		form = StartForm(request.POST)
 		if form.is_valid():

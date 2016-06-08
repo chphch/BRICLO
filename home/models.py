@@ -22,5 +22,6 @@ class Start(models.Model):
 	kakao = models.TextField()
 	address = models.TextField()
 	author = models.ForeignKey('auth.User')
+	name = models.ForeignKey('auth.User.username')
 	style = models.CharField(max_length=6, choices = STYLE_CHOICES, default = "street")
 	created_date = models.DateTimeField(default=timezone.now)
