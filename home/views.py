@@ -57,15 +57,18 @@ def faq_detail14(request):
 def faq_detail15(request):
 	return render(request, 'home/question15.html', )
 
+def ordered(request):
+	return render(request, 'home/ordered.html', )
+
 @login_required(login_url='/accounts/login/')
+
 def start_street(request):
 	if request.method == "POST":
 		form = StartForm(request.POST)
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
-			post.published_date = timezone.now()
-			post.style = 
+			post.style = "street"
 			post.save()
 			return redirect('home.views.main')
 	else:
@@ -78,7 +81,7 @@ def start_casual(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
-			post.published_date = timezone.now()
+			post.style = "casual"
 			post.save()
 			return redirect('home.views.main')
 	else:
@@ -91,7 +94,7 @@ def start_both(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
-			post.published_date = timezone.now()
+			post.style = "both"
 			post.save()
 			return redirect('home.views.main')
 	else:

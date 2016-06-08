@@ -1,0 +1,106 @@
+@font-face{font-family:'NanumBarunpenB'; src:url('NanumBarunpenB.ttf')}
+ 
+.caption {font-family:NanumBarunpenB;}
+
+h3 {
+	color:black !important;
+}
+#menu-74.mbr-navbar--stuck .mbr-navbar__section {
+  background: #f6f6f6 !important;
+}
+
+
+/*로고, 로고옆글씨 클때*/
+.mbr-navbar__brand-link:after,
+.mbr-navbar__brand-img {
+    height: 40px;
+    margin-left: 8px;
+}
+
+/* 로고옆 글씨 작을때 */
+.mbr-navbar--short .mbr-navbar__brand-link:after,
+.mbr-navbar--short .mbr-navbar__brand-img {
+    height: 30px;
+    margin-left:3px;
+}
+
+.mbr-buttons__btn,
+.mbr-buttons__link,
+.mbr-buttons__btn:hover,
+.mbr-buttons__link:hover {
+    text-decoration: none;
+    color:black;
+}
+#whatis {
+	position:relative !important;
+	top:-9rem !important;
+	text-align:center;
+}
+#blank {
+	height:30px;
+}
+.mbr-section__container--isolated {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.ttitle {
+	padding-top:10px;
+    text-align:center;
+}
+#howtitle {
+	padding:2px;
+	width:100%;
+	height:100%;
+}
+/*브리클로 시작하기 반응형 */
+.content-2 .thumbnail2 {
+    text-align:center;
+    width:30%;
+    float:left;
+    border:1px solid black;
+    border-radius:5px;
+    margin:1%;
+    padding:2%;
+}
+@media (max-width: 767px) {
+  .content-2 .thumbnail2 {
+    padding-top: 52px;
+    padding-bottom: 65px;
+    margin-bottom: 0;
+    margin-left:10%;
+    width:80%;
+  }
+}
+@media (max-width: 480px) {
+  .content-2 .thumbnail2 {
+    padding-bottom: 70px;
+    margin-left:10%;
+    width:80%;
+  }
+}
+.content-2 .thumbnail2 > img,
+.content-2 .thumbnail2 .image img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .content-2 .thumbnail2 > img,
+  .content-2 .thumbnail2 .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.content-2 .thumbnail2 h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  margin-top: 11px;
+}
+@media (max-width: 767px) {
+  .content-2 .thumbnail2 h3 {
+    font-size: 25px;
+    letter-spacing: 6px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    margin-top: -14px;
+  }
+}

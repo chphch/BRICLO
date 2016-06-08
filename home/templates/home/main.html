@@ -53,9 +53,7 @@
     </div>
 </section>
 
-<section class="content-2 col-4" id="features1-77" style="background: rgba(10, 40, 256,0.84);">
 <section class="content-2 col-4" id="features1-77" style="background-color: rgb(255, 255, 255);">
-    
     <div class="container">
         <div class="row">
             <div>
@@ -102,11 +100,12 @@
     </div>
 </section>
 
-<section class="mbr-section" id="how_it_works">
-    <div class="mbr" style="text-align:center">
+<section class="mbr-section" id="how_it_works" style="opacity:1;background-color:rgb(123, 134, 342);">
+    <div class="mbr" id="howtitle" style="text-align:center">
         <h1>HOW IT WORKS?</h1>
     </div>
 </section>
+
 <section class="mbr-section mbr-section--relative mbr-section--boxy mbr-parallax-background" id="msg-box1" style="background-image: url({% static "home/css/assets/images/" %});">
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 168, 133);"></div>
     <div class="mbr-section__container mbr-section__container--isolated container">
@@ -131,7 +130,7 @@
 </section>
 
 <section class="mbr-section mbr-section--relative mbr-section--boxy mbr-parallax-background" id="msg-box2" style="background-image: url({% static "home/css/assets/images/" %});">
-    <div class="mbr-overlay" style="opacity: 1; background-color: rgb(109, 187, 213);"></div>
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(109, 187, 213);"></div>
     <div class="mbr-section__container mbr-section__container--isolated container">
         <div class="row">
             <div class="mbr-box mbr-box--fixed mbr-box--adapted">
@@ -145,7 +144,7 @@
                         <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg"><p>스타일리스트가 당신의 선호에 맞게 선별한 패키지를 받아보세요.<br>한 패키지에는 스타일리스트가 당신만을 위해 선별한 두 벌의 옷이 들어 있습니다. &nbsp;</p></div>
                     </div>
                 </div>
-                <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-5" style="top:-3rem;">
+                <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-5">
                     <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom mbr-figure--full-width"><img class="mbr-figure__img" src="{% static "home/css/assets/images/iphone-1032784-1920-1920x1440-16.gif" %}"></figure>
                 </div>
             </div>
@@ -178,9 +177,9 @@
 
 
 
-<section class="mbr-section mbr-section--relative mbr-section--boxy mbr-parallax-background mbr-section--boxy" id="blank"></section>
+<section class="mbr-section mbr-section--relative mbr-section--boxy mbr-parallax-background mbr-section--boxy" id="blank" style="opacity:1;background-color:rgb(150, 168, 133)"></section>
 
-<section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider2-78">
+<section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider2-78" style="opacity:1;background-color:rgb(150, 168, 133)">
     <div class="mbr-section__container container article-slider mbr-section__container--isolated">
         <div class=" col-sm-8 col-sm-offset-2">
             <ol class="carousel-indicators">
@@ -237,32 +236,38 @@
 
 <section class="content-2 col-4" id="get_started" style="background-color: rgb(255, 255, 255);">
     <div class="container">
-        <div class="row">
+        <div class="row" id="startrow">
             <h1 class="mbr-hero__text ttitle">브리클로 시작하기</h1><br>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="{% static "home/css/assets/images/register-350x350.png" %}"></div>
+            <a href = "{% url "home:start_street" %}">
+                <div class="thumbnail2">
                     <div>
-                        <a href = "{% url "home:start_street" %}">스트리트</a>
+                        <h3>스트리트</h3>
+                    </div>
+                    <div class="image">
+                        <img class="undefined" src="{% static "home/css/assets/images/register-350x350.png" %}">
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="{% static "home/css/assets/images/councel-350x350.png" %}"></div>
+            </a>
+            <a href = "{% url "home:start_casual" %}">
+                <div class="thumbnail2">
                     <div>
-                        <a href = "{% url "home:start_casual" %}">캐쥬얼</a>
+                        <h3>캐쥬얼</h3>
+                    </div>
+                    <div class="image">
+                        <img class="undefined" src="{% static "home/css/assets/images/councel-350x350.png" %}">
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="{% static "home/css/assets/images/rent-350x350.png" %}"></div>
+            </a>
+            <a href = "{% url "home:start_both" %}">
+                <div class="thumbnail2">
                     <div>
-                        <a href = "{% url "home:start_both" %}">둘다</a>
+                        <h3>둘다</h3>
+                    </div>
+                    <div class="image">
+                        <img class="undefined" src="{% static "home/css/assets/images/rent-350x350.png" %}">
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -323,6 +328,8 @@
         </div>
     </div>
 </footer>
+
+</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="{% static "home/css/assets/map/map.js" %}"></script>
