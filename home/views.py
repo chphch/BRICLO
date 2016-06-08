@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.utils import timezone
 from .forms import StartForm
 from django.contrib.auth.decorators import login_required
+from accounts.models import Profile
+from django.contrib.auth.models import User
 
 
 def main(request):
@@ -95,3 +97,7 @@ def start_both(request):
 	else:
 			form = StartForm()
 	return render(request, 'home/start.html', {'form': form})
+
+def profile(request, user_pk):
+	user = User.objects.get(pk=user_pk)
+	return render(request, 'home/profile.html', {'user':user})

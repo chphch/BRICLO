@@ -16,14 +16,25 @@
 <div class="container" id="sign_up">
     <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
-        <p id="briclo" class="lead text-align-center" ><strong>BRICLO</strong></p>
-        <form method="post" action="">{% csrf_token %}
-            {% bootstrap_form form %}
+    
 
-            {% buttons %}
-                <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %} 회원가입 </button>
-            {% endbuttons %}
-        </form>
+{{user.username}}
+{{user.profile.name}}
+
+{{user.profile.gender}}
+
+{{user.profile.top_size}}
+
+{{user.profile.bottom_size}}
+
+{{user.profile.adress}}
+
+{{user.profile.phone}}
+
+
+{{user.profile.email}}
+
+
     </div>
     </div>
 </div>

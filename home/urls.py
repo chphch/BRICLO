@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^start_street/$', views.start_street, name='start_street'),
     url(r'^start_casual/$', views.start_casual, name='start_casual'),
     url(r'^start_both/$', views.start_both, name='start_both'),
+    url(r'^profile/(?P<user_pk>\d+)/$', views.profile, name='profile'),
     url(r'^faq/1/$', views.faq_detail1, name='faq_detail1'),
     url(r'^faq/2/$', views.faq_detail2, name='faq_detail2'),
     url(r'^faq/3/$', views.faq_detail3, name='faq_detail3'),

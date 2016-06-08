@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     # 'debug_toolbar',  # dev.py 로 옮김.
     # local apps
     'accounts',
-    'shop',
     'home',
 ]
 
