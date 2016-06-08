@@ -1445,7 +1445,7 @@ html {
 .mbr-hero {
   color: #fff;
   position: relative;
-  text-align:center;
+  text-align:left;
 }
 .mbr-hero__text {
   font-size: 46px;
