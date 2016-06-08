@@ -1210,9 +1210,6 @@ html {
 .mbr-section--relative {
   position: relative;
 }
-.mbr-section--boxy {
-  height: 45rem;
-}
 .mbr-section--fixed-size {
   overflow: hidden;
 }
@@ -1445,7 +1442,6 @@ html {
 .mbr-hero {
   color: #fff;
   position: relative;
-  text-align:left;
 }
 .mbr-hero__text {
   font-size: 46px;
@@ -1459,15 +1455,12 @@ html {
   top: 8px;
 }
 .mbr-hero__subtext {
-  font-size: 16px;
+  font-size: 21px;
   line-height: 29px;
   margin: -32px 0 3px 0;
   padding: 0 0 41px 0;
   position: relative;
   top: 6px;
-}
-.mbr-hero__subtext strong {
-  font-size: 22px;
 }
 .mbr-figure {
   display: inline-block;
