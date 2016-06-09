@@ -75,3 +75,19 @@ class LoginForm(AuthenticationForm):
     password = forms.CharField(label='비밀번호', widget=forms.PasswordInput())
 
 
+
+class UpdateForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('email','name', 'adress', 'phone', 'top_size', 'bottom_size' )
+
+
+class PassChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(label=_("기존 비밀번호"), widget=forms.PasswordInput(attrs={'autofocus': ''}), )
+    new_password1 = forms.CharField(label=_("새 비밀번호"), widget=forms.PasswordInput(),)
+    new_password2 = forms.CharField(label=_("새 비밀번호 확인"), widget=forms.PasswordInput(), )
+
+    error_messages = dict(SetPasswordForm.error_messages, **{
+        'password_incorrect': _("기존 비밀번호가 일치하지 않습니다. 다시 입력해주세요."),
+    })
