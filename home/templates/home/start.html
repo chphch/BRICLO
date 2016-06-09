@@ -1,12 +1,21 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 {% block content %}
 
-<section class="mbr-section mbr-section--relative mbr-section--fixed-size" style="top:100px">
-<form method="POST">{% csrf_token %}
-{{ form.as_p }}
-<button type="submit">시작하기</button>
-</form>
-</section>
 
+<div class="container" id="sign_up" style="margin-top:10%; margin-bottom:20%">
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <p id="briclo" class="lead text-align-center" ><strong>BRICLO</strong></p>
+        <form method="post" action="">{% csrf_token %}
+            {% bootstrap_form form %}
+
+            {% buttons %}
+                <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %}  시작하기</button>
+            {% endbuttons %}
+        </form>
+    </div>
+    </div>
+</div>
 {% endblock content %}

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v2.6.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="{% static "home/css/assets/images/discover-mobile-350x350-16.png" %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static "home/css/assets/images/정사각형로고.jpg" %}" type="image/x-icon">
   <meta name="description" content="">
 
   <title>BRICLO</title>
@@ -17,25 +17,33 @@
   <link href="{% static "home/css/assets/animate.css/animate.min.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/socicon/css/socicon.min.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/mobirise/css/style.css" %}" rel="stylesheet">
-   <link href="{% static "home/css/main.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/mobirise-slider/style.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/mobirise-gallery/style.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/mobirise/css/mbr-additional.css" %}" rel="stylesheet" type="text/css">
+  <link href="{% static "home/css/main.css" %}" rel="stylesheet">
   
-  
+
 </head>
+{% if messages %}
+        {% for message in messages %}
+        <script type="text/javascript">
+        $(document).ready(function() {
+          alert('{{ message }}') });
+        </script>
+        {% endfor %}
+{% endif %}
 <body onload="initialize()">
 
 <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-74">
     <div class="mbr-navbar__section mbr-section">
         <div class="mbr-section__container container">
             <div class="mbr-navbar__container">
-                <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
+                <div id="brand_logo1" class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                    
                     <a href="{% url "main" %}">
                         <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                            <span class="mbr-brand__logo"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/logo-mobile-350x350-53.png" %}" alt="Mobirise"></span>
-                            <span class="mbr-brand__logo" style="width:80%;height:80%"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/name-mobile-350x350-53.png" %}" alt="Mobirise"></span>
+                            <span id="brand_logo"class="mbr-brand__logo"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/logo-mobile-350x350-53.png" %}" alt="BRICLO"></span>
+                            <span id="brand_logo_name" class="mbr-brand__logo" style="width:80%;height:80%"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/name-mobile-350x350-53.png" %}" alt="Mobirise"></span>
                         </span>
                     </a>
                 </div>
@@ -45,10 +53,10 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="localhost:8000/#get_started">브리클로 시작하기</a>
+                                    <a class="mbr-buttons__link btn text-white" href="/#get_started">브리클로 시작하기</a>
                                 </li>
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="localhost:8000/#how_it_works">이용방법</a>
+                                    <a class="mbr-buttons__link btn text-white" href="/#how_it_works">이용방법</a>
                                 </li>
                                 <li class="mbr-navbar__item">
                                     <a class="mbr-buttons__link btn text-white" href="{% url "home:faq" %}">FAQS</a>

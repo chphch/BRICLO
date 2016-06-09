@@ -4,6 +4,7 @@ from .forms import StartForm
 from django.contrib.auth.decorators import login_required
 from accounts.models import Profile
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 def main(request):
@@ -68,8 +69,10 @@ def start_street(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
+			post.name = request.user.profile.name
 			post.style = "street"
 			post.save()
+			messages.info(request,'신청이 완료되었습니다.감사합니다.')
 			return redirect('home.views.main')
 	else:
 			form = StartForm()
@@ -81,6 +84,7 @@ def start_casual(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
+			post.name = request.user.profile.name
 			post.style = "casual"
 			post.save()
 			return redirect('home.views.main')
@@ -94,6 +98,7 @@ def start_both(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
+			post.name = request.user.profile.name
 			post.style = "both"
 			post.save()
 			return redirect('home.views.main')
