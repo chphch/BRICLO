@@ -8,7 +8,10 @@ h3 {
 #menu-74.mbr-navbar--stuck .mbr-navbar__section {
   background: #f6f6f6 !important;
 }
-
+#brand_logo_name img{
+  top:9%;
+  height:80% !important;
+}
 
 /*로고, 로고옆글씨 클때*/
 .mbr-navbar__brand-link:after,

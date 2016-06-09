@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v2.6.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="{% static "home/css/assets/images/정사각형로고.jpg" %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static "home/css/assets/images/square.jpg" %}" type="image/x-icon">
   <meta name="description" content="">
 
   <title>BRICLO</title>
@@ -22,7 +22,6 @@
   <link href="{% static "home/css/assets/mobirise/css/mbr-additional.css" %}" rel="stylesheet" type="text/css">
   <link href="{% static "home/css/main.css" %}" rel="stylesheet">
   
-
 </head>
 {% if messages %}
         {% for message in messages %}
@@ -39,11 +38,16 @@
         <div class="mbr-section__container container">
             <div class="mbr-navbar__container">
                 <div id="brand_logo1" class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
-                   
                     <a href="{% url "main" %}">
                         <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                            <span id="brand_logo"class="mbr-brand__logo"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/logo-mobile-350x350-53.png" %}" alt="BRICLO"></span>
-                            <span id="brand_logo_name" class="mbr-brand__logo" style="width:80%;height:80%"><img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/name-mobile-350x350-53.png" %}" alt="Mobirise"></span>
+                            <span id="brand_logo"class="mbr-brand__logo">
+                              <img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/logo-mobile-350x350-53.png" %}" alt="BRICLO">
+                            </span>
+                            <span id="brand_logo_name" class="mbr-brand__logo">
+                              <div class=mbr-navbar__brand-img mbr-brand__img">
+                                <img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/name-mobile-350x350-53.png" %}" alt="Mobirise">
+                              </div>
+                            </span>
                         </span>
                     </a>
                 </div>
