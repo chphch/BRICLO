@@ -6,7 +6,7 @@ h3 {
 	color:black !important;
 }
 #menu-74.mbr-navbar--stuck .mbr-navbar__section {
-  background: #f6f6f6 !important;
+  background: rgba(180,180,180,0.8) !important;
 }
 #brand_logo_name img{
   top:9%;
@@ -26,7 +26,23 @@ h3 {
     height: 30px;
     margin-left:3px;
 }
-
+#welcome {
+  font-size:30px !important;
+}
+.mbr-hero__text{
+  font-size:45px;
+}
+.mbr-hero__subtext{
+  font-size:15px;
+  line-height:60px;
+}
+.mbr-hero__subtext strong{
+  font-size:20px;
+  line-height:40px;
+}
+.mbr-article,.mbr-article--auto-align,.mbr-article--wysiwyg {
+  line-height:;
+}
 .mbr-buttons__btn,
 .mbr-buttons__link,
 .mbr-buttons__btn:hover,
