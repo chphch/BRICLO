@@ -63,44 +63,15 @@ def ordered(request):
 
 @login_required(login_url='/accounts/login/')
 
-def start_street(request):
+def start(request):
 	if request.method == "POST":
 		form = StartForm(request.POST)
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.author = request.user
 			post.name = request.user.profile.name
-			post.style = "street"
 			post.save()
 			messages.info(request,'신청이 완료되었습니다.감사합니다.')
-			return redirect('home.views.main')
-	else:
-			form = StartForm()
-	return render(request, 'home/start.html', {'form': form})
-
-def start_casual(request):
-	if request.method == "POST":
-		form = StartForm(request.POST)
-		if form.is_valid():
-			post = form.save(commit=False)
-			post.author = request.user
-			post.name = request.user.profile.name
-			post.style = "casual"
-			post.save()
-			return redirect('home.views.main')
-	else:
-			form = StartForm()
-	return render(request, 'home/start.html', {'form': form})
-
-def start_both(request):
-	if request.method == "POST":
-		form = StartForm(request.POST)
-		if form.is_valid():
-			post = form.save(commit=False)
-			post.author = request.user
-			post.name = request.user.profile.name
-			post.style = "both"
-			post.save()
 			return redirect('home.views.main')
 	else:
 			form = StartForm()

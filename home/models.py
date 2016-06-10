@@ -10,11 +10,6 @@ SIZE_CHOICES = (
 	('XXL','XXL'),
 	('XXXL','XXXL'),
 	)
-STYLE_CHOICES = (
-	('street','Street'),
-	('casual','Casual'),
-	('both','Both'),
-	)
 
 class Start(models.Model):
 	size_top = models.CharField(max_length=6, choices=SIZE_CHOICES, default='M')
@@ -23,5 +18,4 @@ class Start(models.Model):
 	address = models.TextField()
 	author = models.ForeignKey('auth.User', related_name='+')
 	name = models.CharField(max_length=100, default="")
-	style = models.CharField(max_length=6, choices = STYLE_CHOICES, default = "street")
 	created_date = models.DateTimeField(default=timezone.now)

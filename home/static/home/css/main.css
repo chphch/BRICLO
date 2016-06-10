@@ -1,10 +1,7 @@
-@font-face{font-family:'NanumBarunpenB'; src:url('NanumBarunpenB.ttf')}
- 
-.caption {font-family:NanumBarunpenB;}
-
 h3 {
 	color:black !important;
 }
+
 #menu-74.mbr-navbar--stuck .mbr-navbar__section {
   background: rgba(180,180,180,0.8) !important;
 }
@@ -61,6 +58,7 @@ h3 {
 .mbr-section__container--isolated {
     padding-bottom: 50px;
     padding-top: 20px;
+
 }
 .ttitle {
 	padding-top:10px;
