@@ -21,7 +21,8 @@
   <link href="{% static "home/css/assets/mobirise-gallery/style.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/mobirise/css/mbr-additional.css" %}" rel="stylesheet" type="text/css">
   <link href="{% static "home/css/main.css" %}" rel="stylesheet">
-  
+{% block style %}
+{% endblock %}
 </head>
 {% if messages %}
         {% for message in messages %}
@@ -44,7 +45,7 @@
                               <img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/logo-mobile-350x350-53.png" %}" alt="BRICLO">
                             </span>
                             <span id="brand_logo_name" class="mbr-brand__logo">
-                              <div class=mbr-navbar__brand-img mbr-brand__img">
+                              <div class="mbr-navbar__brand-img mbr-brand__img">
                                 <img class="mbr-navbar__brand-img mbr-brand__img" src="{% static "home/css/assets/images/name-mobile-350x350-53.png" %}" alt="Mobirise">
                               </div>
                             </span>
@@ -104,7 +105,40 @@
   <script src="{% static "home/css/assets/social-likes/social-likes.js" %}"></script>
   <script src="{% static "home/css/assets/mobirise/js/script.js" %}"></script>
   <script src="{% static "home/css/assets/mobirise-gallery/script.js" %}"></script>
-  
+  <script type="text/javascript" src="{% static "home/js/jquery.alsEN-1.0.min.js" %}"></script>
+
+<script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("#lista1").als({
+                    visible_items: 3,
+                    scrolling_items: 1,
+                    orientation: "horizontal",
+                    circular: "yes",
+                    autoscroll: "no",
+                    interval: 5000,
+                    direction: "right"
+                });
+
+                //logo hover
+                $("#logo_img").hover(function()
+                {
+                    $(this).attr("src","images/als_logo_hover212x110.png");
+                },function()
+                {
+                    $(this).attr("src","images/als_logo212x110.png");
+                });
+
+                //logo click
+                $("#logo_img").click(function()
+                {
+                    location.href = "http://als.musings.it/index.php";
+                });
+
+                $("a[href^='http://']").attr("target","_blank");
+                $("a[href^='http://als']").attr("target","_self");
+            });
+        </script>
   
 </body>
 </html>
