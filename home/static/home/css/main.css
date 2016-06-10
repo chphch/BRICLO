@@ -1,7 +1,7 @@
 h3 {
 	color:black !important;
 }
-
+/*navbar*/
 #menu-74.mbr-navbar--stuck .mbr-navbar__section {
   background: rgba(180,180,180,0.8) !important;
 }
@@ -9,20 +9,22 @@ h3 {
   top:9%;
   height:80% !important;
 }
-
 /*로고, 로고옆글씨 클때*/
 .mbr-navbar__brand-link:after,
 .mbr-navbar__brand-img {
     height: 40px;
     margin-left: 8px;
 }
-
 /* 로고옆 글씨 작을때 */
 .mbr-navbar--short .mbr-navbar__brand-link:after,
 .mbr-navbar--short .mbr-navbar__brand-img {
     height: 30px;
     margin-left:3px;
 }
+.mbr-header__text {
+  font-size:23px;
+}
+
 #welcome {
   font-size:30px !important;
 }
@@ -32,6 +34,7 @@ h3 {
 .mbr-hero__subtext{
   font-size:15px;
   line-height:60px;
+  margin:0 0 0 0 !important;
 }
 .mbr-hero__subtext strong{
   font-size:20px;
@@ -40,6 +43,12 @@ h3 {
 .mbr-article,.mbr-article--auto-align,.mbr-article--wysiwyg {
   line-height:;
 }
+
+.mbr-figure__img {
+  height:30%;
+  width:auto;
+}
+
 .mbr-buttons__btn,
 .mbr-buttons__link,
 .mbr-buttons__btn:hover,
@@ -49,25 +58,35 @@ h3 {
 }
 #whatis {
 	position:relative !important;
-	top:-9rem !important;
+	top:3rem !important;
 	text-align:center;
 }
 #blank {
 	height:30px;
 }
 .mbr-section__container--isolated {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     padding-top: 20px;
-
 }
 .ttitle {
 	padding-top:10px;
     text-align:center;
 }
+
+.container {
+  padding-left:5%;
+  padding-right:5%;
+}
+.mbr-section__container--middle {
+  padding-bottom:20px;
+}
+
+/*howitworks*/
 #howtitle {
 	padding:2px;
 	width:100%;
-	height:100%;
+	height:55px;
+  font-size:45px;
 }
 /*브리클로 시작하기 반응형 */
 .content-2 .thumbnail2 {

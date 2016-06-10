@@ -19,3 +19,6 @@ class Start(models.Model):
 	author = models.ForeignKey('auth.User', related_name='+')
 	name = models.CharField(max_length=100, default="")
 	created_date = models.DateTimeField(default=timezone.now)
+
+	def __str__(self):
+		return self.author.username
