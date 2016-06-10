@@ -1,5 +1,93 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
+{% block style %}
+<style type="text/css">
+
+.als-container {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.als-viewport {
+    padding-left:100px;
+    padding-right:100px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.als-wrapper {
+    position: relative;
+    list-style: none;
+}
+
+.als-item {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+.als-prev, .als-next {
+    position: absolute;
+    cursor: pointer;
+    clear: both;
+}
+
+
+/**************************
+ * specific als elements
+ * styling for #lista1
+ **************************/
+
+#lista1 {
+    margin: 60px auto 80px auto;
+}
+
+#lista1 .als-item {
+    margin: 0px 30px;
+    min-height: 140px;
+    min-width: 128px;
+}
+
+#lista1 .als-item img {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    margin-bottom: 8px;
+}
+
+#lista1 .als-prev, #lista1 .als-next {
+    top: 58px;
+    width: 15px;
+    height: 22px;
+}
+
+#lista1 .als-prev {
+    left: 90px;
+}
+
+#lista1 .als-next {
+    right: 100px;
+}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+</style>
+{% endblock %}
 {% block content %}
 
 <section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background mbr-after-navbar" id="header1-73" style="background-image: url({% static "home/css/assets/images/macbook-926425-1920-1920x1279-92.jpg" %}); ">
@@ -207,7 +295,33 @@
         </div>
     </div>
 </section>
+<section id="content">
+            <h2>Demo 1</h2>
+            <p>This list is composed by classical list elements &lt;ul&gt; e &lt;li&gt;</p>
+            <div id="lista1" class="als-container">
+                <span class="als-prev"><img src="{% static "home/images/thin_left_arrow_333.png" %}" alt="prev" title="previous" /></span>
+                <div class="als-viewport">
+                    <ul class="als-wrapper">
+                        <li class="als-item"><img src="{% static "home/images/als-images/calculator.png" %}"alt="calculator" title="calculator" />calculator</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/light_bulb.png" %}"alt="light bulb" title="light bulb" />light bulb</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/card.png" %}"alt="card" title="card" />card</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/chess.png" %}"alt="chess" title="chess" />chess</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/clock.png" %}"alt="alarm clock" title="alarm clock" />alarm clock</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/cut.png" %}"alt="scissors" title="scissors" />scissors</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/heart.png" %}"alt="heart" title="heart" />heart</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/map.png" %}"alt="pin" title="pin" />pin</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/mobile_phone.png" %}"alt="mobile phone" title="mobile phone" />mobile phone</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/camera.png" %}"alt="camera" title="camera" />camera</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/music_note.png" %}"alt="music note" title="music note" />music note</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/protection.png" %}"alt="umbrella" title="umbrella" />umbrella</li>
+                        <li class="als-item"><img src="{% static "home/images/als-images/television.png" %}"alt="television" title="television" />television</li>
+                    </ul>
+                </div>
+                <span class="als-next"><img src="{% static "home/images/thin_right_arrow_333.png" %}"alt="next" title="next" /></span>
+            </div>
 
+            </div>
+        </section>
 <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="contacts2-90" style="background-color: rgb(60, 60, 60);">
     <div class="mbr-section__container container">
         <div class="mbr-contacts mbr-contacts--wysiwyg row">
