@@ -71,7 +71,7 @@ def start(request):
 			post.author = request.user
 			post.name = request.user.profile.name
 			post.save()
-			messages.info(request,'신청이 완료되었습니다.감사합니다.')
+			messages.info(request,"msg")
 			return redirect('home.views.main')
 	else:
 			form = StartForm()

@@ -59,10 +59,8 @@ class SignupForm(UserCreationForm):
         if commit:
             user.save()
             user.profile.name = self.cleaned_data['name']
-
             user.profile.adress = self.cleaned_data['adress']
             user.profile.gender = self.cleaned_data['gender']
-
             user.profile.top_size = self.cleaned_data['top_size']
             user.profile.bottom_size = self.cleaned_data['bottom_size']
             user.profile.email = self.cleaned_data['email']
@@ -80,7 +78,7 @@ class UpdateForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ('email','name', 'adress', 'phone', 'top_size', 'bottom_size' )
+        fields = ('email','name','gender', 'adress', 'phone', 'top_size', 'bottom_size' )
 
 
 class PassChangeForm(PasswordChangeForm):

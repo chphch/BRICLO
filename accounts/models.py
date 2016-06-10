@@ -23,17 +23,13 @@ class Profile(models.Model):
     gender= models.CharField(max_length=6, choices = GENDER_CHOICES, default='MEN')
     top_size = models.CharField(max_length=6, choices = SIZE_CHOICES, default='M')
     bottom_size = models.CharField(max_length=6, choices = SIZE_CHOICES, default='M')
-
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
     name = models.CharField(max_length=40,null=True)
     email = models.EmailField(null=True)
     phone = models.CharField(max_length=40,null=True)
 
     def __str__(self):
         return self.user.username
-
-
 
 def create_profile(sender, **kwargs):
     user = kwargs["instance"]

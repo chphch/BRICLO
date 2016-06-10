@@ -267,5 +267,10 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="{% static "home/css/assets/map/map.js" %}"></script>
+{% if messages %}
+<script type="text/javascript">
+    alert("신청이 완료되었습니다. 감사합니다.");
+</script>
+{% endif %}
 
 {% endblock content %}

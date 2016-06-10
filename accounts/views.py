@@ -36,8 +36,13 @@ def profile(request):
 
 @login_required
 def profile_update(request):
-
     user = get_object_or_404(User, pk=request.user.pk)
-    form = UpdateForm(request.POST, instance=user.profile)
-     
-    return render(request, 'accounts/profile_update.html', {'user': user, 'form':form, })
+    if request.method == "POST":
+        form = UpdateForm(request.POST, instance=user.profile)
+        if form.is_valid():
+            form.save()
+            messages.info(request,'msg')
+    else:
+        form = UpdateForm(instance=user.profile)
+    return render(request, 'accounts/profile_update.html', {'user':user,'form':form,})
+
