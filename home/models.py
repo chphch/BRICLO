@@ -12,6 +12,10 @@ SIZE_CHOICES = (
 	)
 
 class Start(models.Model):
+	style1 = models.BooleanField(default=False)
+	style2 = models.BooleanField(default=False)
+	style3 = models.BooleanField(default=False)
+	style4 = models.BooleanField(default=False)
 	size_top = models.CharField(max_length=6, choices=SIZE_CHOICES, default='M')
 	size_bottom = models.CharField(max_length=6, choices = SIZE_CHOICES, default = 'M')
 	kakao = models.CharField(max_length=100)

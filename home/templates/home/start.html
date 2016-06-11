@@ -2,18 +2,82 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% block content %}
-
+<link href="{% static "home/css/start.css" %}" rel="stylesheet">
 
 <div class="container" id="sign_up" style="margin-top:10%; margin-bottom:20%">
     <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
+    <div class="col-sm-8 col-sm-offset-8">
         <p id="briclo" class="lead text-align-center" ><strong>BRICLO</strong></p>
-        <form method="post" action="">{% csrf_token %}
-            {% bootstrap_form form %}
-
-            {% buttons %}
-                <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %}  시작하기</button>
-            {% endbuttons %}
+        <form method="post" action=""><input type="hidden" name="csrfmiddlewaretoken" value="CUOFIeIPh1Q4CEkTQIAdfZxILpgL8lh6">
+            <div class="row1">
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input class="" id="id_style1" name="style1" type="checkbox">
+                        <label for="id_style1" style="">
+                            
+                            댄디코디
+                            <img src="{% static 'home/images/style1.png' %}">
+                        </label>   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="id_style2">
+                            <input class="" id="id_style2" name="style2" type="checkbox"> 아재코디</label>
+                        <img src="{% static 'home/images/style1.png' %}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="id_style3">
+                            <input class="" id="id_style3" name="style3" type="checkbox">스트리트코디</label>
+                        <img src="{% static 'home/images/style1.png' %}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="id_style4">
+                            <input class="" id="id_style4" name="style4" type="checkbox">코디코디</label>
+                        <img src="{% static 'home/images/style1.png' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="form-group">
+                    <label class="control-label" for="id_size_top">Size top</label>
+                    <select class="form-control" id="id_size_top" name="size_top" required="required" title="">
+                        <option value="S">S</option>
+                        <option value="M" selected="selected">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                        <option value="XXXL">XXXL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="id_size_bottom">Size bottom</label>
+                    <select class="form-control" id="id_size_bottom" name="size_bottom" required="required" title="">
+                        <option value="S">S</option>
+                        <option value="M" selected="selected">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                        <option value="XXXL">XXXL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="id_kakao">Kakao</label>
+                    <input class="form-control" id="id_kakao" maxlength="100" name="kakao" placeholder="Kakao" required="required" title="" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="id_address">Address</label>
+                    <textarea class="form-control" cols="40" id="id_address" name="address" placeholder="Address" required="required" rows="10" title=""></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary pull-right">
+                    <span class="glyphicon glyphicon-ok-sign"></span>  시작하기</button>
+                </div>
+            </div>
         </form>
     </div>
     </div>

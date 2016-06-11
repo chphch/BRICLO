@@ -1,3 +1,4 @@
+
 h3 {
 	color:black !important;
 }
@@ -21,11 +22,20 @@ h3 {
     height: 30px;
     margin-left:3px;
 }
+
+.row {
+  margin:0 0 0 0 !important;
+  padding:0 0 0 0 !important;
+}
 .container {
   padding-left:5%;
   padding-right:5%;
 }
 /* MAIN */
+.mbr-section {
+  margin:0;
+  padding:0;
+}
 #welcome {
   font-size:30px !important;
 }
@@ -49,42 +59,65 @@ h3 {
     color:black;
 }
 /* What is BRICLO*/
-#whatis {
-  position:relative !important;
-  top:3rem !important;
+#whatisb {
   text-align:center;
 }
 /* HOW IT WORKS */
+.mbr-box--fixed {
+  height:100%;
+}
+.mbr_contents{
+  height:25rem !important;
+}
 .mbr-section__container--isolated {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height:400px;
+}
+.mbr-section__container--middle {
+  padding-bottom:20px;
 }
 .mbr-header__text {
   font-size:23px;
-}
-.mbr-article,.mbr-article--auto-align,.mbr-article--wysiwyg {
-  line-height:;
 }
 .mbr-figure__img {
   height:30%;
   width:auto;
 }
-
-
-
-
-
-.mbr-section__container--middle {
-  padding-bottom:20px;
+/* 브리클로 시작하기 */
+#mkmk {
+  height:300px;
 }
-
-/*howitworks*/
-#howtitle {
+/*stylist*/
+#content {
+  height:500px;
+}
+#stylist {
 	padding:2px;
 	width:100%;
 	height:55px;
   font-size:45px;
 }
+#lista1 {
+  margin:0 !important;
+  height:500px !important;
+}
+#als-wrapper_0 {
+  height:500px !important;
+}
+#als-viewport_0 {
+  height:500px !important;
+}
+.als-section {
+  height:300px !important;
+}
+
+/* footer1 */
+#footer1 {
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
 /*브리클로 시작하기 반응형 */
 .content-2 .thumbnail2 {
     text-align:center;
@@ -142,4 +175,4 @@ h3 {
     margin-bottom: 20px;
     margin-top: -14px;
   }
-}
+} 
