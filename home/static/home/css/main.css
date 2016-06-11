@@ -21,10 +21,11 @@ h3 {
     height: 30px;
     margin-left:3px;
 }
-.mbr-header__text {
-  font-size:23px;
+.container {
+  padding-left:5%;
+  padding-right:5%;
 }
-
+/* MAIN */
 #welcome {
   font-size:30px !important;
 }
@@ -40,15 +41,6 @@ h3 {
   font-size:20px;
   line-height:40px;
 }
-.mbr-article,.mbr-article--auto-align,.mbr-article--wysiwyg {
-  line-height:;
-}
-
-.mbr-figure__img {
-  height:30%;
-  width:auto;
-}
-
 .mbr-buttons__btn,
 .mbr-buttons__link,
 .mbr-buttons__btn:hover,
@@ -56,27 +48,32 @@ h3 {
     text-decoration: none;
     color:black;
 }
+/* What is BRICLO*/
 #whatis {
-	position:relative !important;
-	top:3rem !important;
-	text-align:center;
+  position:relative !important;
+  top:3rem !important;
+  text-align:center;
 }
-#blank {
-	height:30px;
-}
+/* HOW IT WORKS */
 .mbr-section__container--isolated {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-.ttitle {
-	padding-top:10px;
-    text-align:center;
+.mbr-header__text {
+  font-size:23px;
+}
+.mbr-article,.mbr-article--auto-align,.mbr-article--wysiwyg {
+  line-height:;
+}
+.mbr-figure__img {
+  height:30%;
+  width:auto;
 }
 
-.container {
-  padding-left:5%;
-  padding-right:5%;
-}
+
+
+
+
 .mbr-section__container--middle {
   padding-bottom:20px;
 }
