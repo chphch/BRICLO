@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from datetime import datetime
+from django.conf import settings
+from accounts.models import Profile
 
 SIZE_CHOICES = (
 	('S','S'),
@@ -20,9 +23,10 @@ class Start(models.Model):
 	size_bottom = models.CharField(max_length=6, choices = SIZE_CHOICES, default = 'M')
 	kakao = models.CharField(max_length=100)
 	address = models.TextField()
-	author = models.ForeignKey('auth.User', related_name='+')
 	name = models.CharField(max_length=100, default="")
 	created_date = models.DateTimeField(default=timezone.now)
+	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.author.username
+		return self.user.username
+

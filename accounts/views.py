@@ -6,6 +6,8 @@ from .forms import SignupForm, SignupForm2, UpdateForm, PassChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
+from accounts.models import Profile
+from home.models import Start
 
 def signup(request):
     if request.user.is_anonymous:
@@ -28,10 +30,10 @@ def signup(request):
 
 @login_required
 def profile(request):
-
     user = get_object_or_404(User, pk=request.user.pk)
-     
-    return render(request, 'accounts/profile.html', {'user': user, })
+    aa = get_object_or_404(User, pk=request.user.pk)
+    remaining_time = aa.start.created_date
+    return render(request, 'accounts/profile.html', {'user': user, 'remaining_time':remaining_time, })
 
 
 @login_required
