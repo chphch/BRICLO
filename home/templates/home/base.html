@@ -108,37 +108,37 @@
   <script type="text/javascript" src="{% static "home/js/jquery.alsEN-1.0.min.js" %}"></script>
 
 <script type="text/javascript">
-            $(document).ready(function()
-            {
-                $("#lista1").als({
-                    visible_items: 3,
-                    scrolling_items: 1,
-                    orientation: "horizontal",
-                    circular: "yes",
-                    autoscroll: "no",
-                    interval: 5000,
-                    direction: "right"
-                });
+$(document).ready(function()
+{
+    $("#lista1").als({
+        visible_items: 3,
+        scrolling_items: 1,
+        orientation: "horizontal",
+        circular: "yes",
+        autoscroll: "no",
+        interval: 5000,
+        direction: "right"
+    });
 
-                //logo hover
-                $("#logo_img").hover(function()
-                {
-                    $(this).attr("src","images/als_logo_hover212x110.png");
-                },function()
-                {
-                    $(this).attr("src","images/als_logo212x110.png");
-                });
+    //logo hover
+    $("#logo_img").hover(function()
+    {
+        $(this).attr("src","images/als_logo_hover212x110.png");
+    },function()
+    {
+        $(this).attr("src","images/als_logo212x110.png");
+    });
 
-                //logo click
-                $("#logo_img").click(function()
-                {
-                    location.href = "http://als.musings.it/index.php";
-                });
+    //logo click
+    $("#logo_img").click(function()
+    {
+        location.href = "http://als.musings.it/index.php";
+    });
 
-                $("a[href^='http://']").attr("target","_blank");
-                $("a[href^='http://als']").attr("target","_self");
-            });
-        </script>
+    $("a[href^='http://']").attr("target","_blank");
+    $("a[href^='http://als']").attr("target","_self");
+});
+</script>
   
 </body>
 </html>
