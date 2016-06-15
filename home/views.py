@@ -68,7 +68,6 @@ def start(request):
 		form = StartForm(request.POST)
 		if form.is_valid():
 			post = form.save(commit=False)
-			post.author = request.user
 			post.name = request.user.profile.name
 			post.save()
 			messages.info(request,"msg")

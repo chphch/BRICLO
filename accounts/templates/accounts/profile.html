@@ -9,8 +9,13 @@
         <p class="lead text-align-center"><strong>내 정보</strong></p>
 
             <div class="form-group">
-                <label class="control-label" for="id_username">남은시간</label>
-                <span class="form-control" id="id_username">{{ remaining_time.start }}</span>
+                <label class="control-label" for="id_username">만료일</label>
+                <span class="form-control" id="id_username">{{ expiration_date }}</span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="id_username">남은기간</label>
+                <span class="form-control" id="id_username">{{ remaining_time.days }}일</span>
             </div>
         
             <div class="form-group">
