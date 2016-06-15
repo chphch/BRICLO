@@ -1597,6 +1597,7 @@ html {
   .mbr-figure--adapted .mbr-figure__img,
   .mbr-figure--adapted .mbr-figure__map {
     width: 100%;
+    display: none;
   }
   .mbr-figure--caption-inside-top .mbr-figure__caption,
   .mbr-figure--caption-inside-bottom .mbr-figure__caption {
@@ -1995,6 +1996,7 @@ html {
 .mbr-article--wysiwyg ol,
 .mbr-article--wysiwyg blockquote {
   margin: 0 0 10px 0;
+  margin-top:3%;
 }
 .mbr-article--wysiwyg blockquote {
   font-size: 17px;
