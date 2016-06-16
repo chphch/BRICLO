@@ -2,47 +2,54 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% block content %}
-
 <link href="{% static "home/css/start.css" %}" rel="stylesheet">
 
 <div class="container" id="sign_up" style="margin-top:10%; margin-bottom:20%">
     <div class="row">
     <div class="col-sm-8 col-sm-offset-8">
         <p id="briclo" class="lead text-align-center" ><strong>BRICLO</strong></p>
-        <form method="post" action=""><input type="hidden" name="csrfmiddlewaretoken" value="CUOFIeIPh1Q4CEkTQIAdfZxILpgL8lh6">
-            <div class="row1">
-                <div class="form-group">
-                    <div class="checkbox">
-                        <input class="" id="id_style1" name="style1" type="checkbox" style="display:none">
-                        <label for="id_style1" style="">
-                            
-                            댄디코디
-                            <img src="{% static 'home/images/style1.png' %}">
-                        </label>   
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label for="id_style2">
-                            <input class="" id="id_style2" name="style2" type="checkbox"> 아재코디</label>
-                        <img src="{% static 'home/images/style1.png' %}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label for="id_style3">
-                            <input class="" id="id_style3" name="style3" type="checkbox">스트리트코디</label>
-                        <img src="{% static 'home/images/style1.png' %}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label for="id_style4">
-                            <input class="" id="id_style4" name="style4" type="checkbox">코디코디</label>
-                        <img src="{% static 'home/images/style1.png' %}">
-                    </div>
-                </div>
-            </div>
+        <form method="POST" action="">
+        {% csrf_token %}
+        <input type="checkbox" name="style1" id="style1" value="1"></input>
+        <label for="style1"><div style="width: 100px;height: 100px; background: blue"></div></label>
+
+        <input type="checkbox" name="style1" id="style2" value="2"></input>
+        <label for="style2"><div style="width: 100px;height: 100px; background: blue"></div></label>
+
+        <input type="checkbox" name="style1" id="style3" value="3"></input>
+        <label for="style3"><div style="width: 100px;height: 100px; background: blue"></div></label>
+
+        <input type="checkbox" name="style1" id="style4" value="4"></input>
+        <label for="style4"><div style="width: 100px;height: 100px; background: blue"></div></label>
+
+        <input type="checkbox" name="style1" id="style5" value="5"></input>
+        <label for="style5"><div style="width: 100px;height: 100px; background: blue"></div></label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="form-group">
                     <label class="control-label" for="id_size_top">Size top</label>
