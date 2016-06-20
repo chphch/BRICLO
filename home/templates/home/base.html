@@ -110,6 +110,10 @@
 <script type="text/javascript">
 $(document).ready(function()
 {
+    $(".portfolio-item").click(function(){
+      $(this).toggleClass("checkbox_toggle");
+    });
+
     $("#lista1").als({
         visible_items: 3,
         scrolling_items: 1,
@@ -139,6 +143,7 @@ $(document).ready(function()
     $("a[href^='http://als']").attr("target","_self");
 });
 </script>
+
   
 </body>
 </html>

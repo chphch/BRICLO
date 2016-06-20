@@ -68,12 +68,15 @@ def start(request):
 		form = StartForm(request.POST)
 		if form.is_valid():
 			post = form.save(commit=False)
+			post.user = request.user
 			post.name = request.user.profile.name
+			post.style1 = str(request.POST.getlist('style1'))
+			post.style2 = str(request.POST.getlist('style2'))
 			post.save()
 			messages.info(request,"msg")
 			return redirect('home.views.main')
 	else:
-			form = StartForm()
+		form = StartForm()
 	return render(request, 'home/start.html', {'form': form})
 
 def profile(request, user_pk):

@@ -8,20 +8,10 @@
 	    width: 100%;
 	}
 }
-#briclo {
-	text-align:center;
-	font-size:30px;
-}
-.row1 {
-	margin-bottom:40px;
-	height:300px;
-}
 .checkbox {
 	border:black 1px solid;
 	height:300px;
 	width:23%;
-	margin-left:1%;
-	margin-right:1%;
 	float:left;
 	border-radius:5px;
 }
@@ -31,4 +21,38 @@
 .checkbox img {
 	height:90%;
 	width:100%;
+}
+.checkbox_toggle {
+	opacity:0.5;
+	border:blue 5px solid;
+}
+@media (min-width: 992px) {
+	.formtitle {
+		padding-left:13%;
+	}
+	.page1 .row {
+		padding-left:13% !important;
+	}
+	.page2 .row {
+		padding-left:10% !important;
+	}
+}
+.page1 .row .portfolio-item {
+	border:1px black solid;
+	border-radius:5px;
+	margin:5px;
+}
+.row .portfolio-item input {
+	display:none;
+}
+.page1 .row .portfolio-item img {
+	height:100%;
+	width:100%;
+}
+/*.page2 {
+	display:none;
+}*/
+.page2 .row .portfolio-item {
+	border:5px grey solid;
+	margin:10px;
 }

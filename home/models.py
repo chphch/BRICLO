@@ -15,18 +15,22 @@ SIZE_CHOICES = (
 	)
 
 class Start(models.Model):
-	style1 = models.BooleanField(default=False)
-	style2 = models.BooleanField(default=False)
-	style3 = models.BooleanField(default=False)
-	style4 = models.BooleanField(default=False)
+	style_1_1 = models.CharField(max_length=20, null=True)
+	style_1_2 = models.CharField(max_length=20, null=True)
+	style_1_3 = models.CharField(max_length=20, null=True)
+	style_2 = models.CharField(max_length=20, null=True)
+	style_3 = models.CharField(max_length=40, null=True)
+	style_4 = models.CharField(max_length=10, null=True)
+	style_5 = models.CharField(max_length=100, null=True)
+	style_6 = models.CharField(max_length=100, null=True)
 	size_top = models.CharField(max_length=6, choices=SIZE_CHOICES, default='M')
 	size_bottom = models.CharField(max_length=6, choices = SIZE_CHOICES, default = 'M')
 	kakao = models.CharField(max_length=100)
 	address = models.TextField()
-	name = models.CharField(max_length=100, default="", null=True)
 	created_date = models.DateTimeField(default=datetime.datetime.now())
 	expiration_date = models.DateTimeField(default=datetime.datetime.now().replace(tzinfo=None)+timedelta(days=30))
-	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="start")
+	user = models.ForeignKey(User, related_name='start',null=True)
+	name = models.CharField(max_length=40, null=True)
 
 	def __str__(self):
 		return self.user.username
