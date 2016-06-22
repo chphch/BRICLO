@@ -2,16 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v2.6.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="{% static "home/css/assets/images/square.jpg" %}" type="image/x-icon">
   <meta name="description" content="">
-
-  <title>BRICLO</title>
-  
+  <title>BRICLO</title> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
   <link href="{% static "home/css/assets/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
   <link href="{% static "home/css/assets/animate.css/animate.min.css" %}" rel="stylesheet">
@@ -24,14 +21,7 @@
 {% block style %}
 {% endblock %}
 </head>
-{% if messages %}
-        {% for message in messages %}
-        <script type="text/javascript">
-        $(document).ready(function() {
-          alert('{{ message }}') });
-        </script>
-        {% endfor %}
-{% endif %}
+
 <body onload="initialize()">
 
 <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-74">
@@ -90,60 +80,21 @@
 </section>
 
 {% block content %}
-
-
 {% endblock %}
 
-  <script src="{% static "home/css/assets/jquery/jquery.min.js" %}"></script>
-  <script src="{% static "home/css/assets/bootstrap/js/bootstrap.min.js" %}"></script>
-  <script src="{% static "https://maps.googleapis.com/maps/api/js" %}"></script>
-  <script src="{% static "home/css/assets/smooth-scroll/SmoothScroll.js" %}"></script>
-  <script src="{% static "home/css/assets/jarallax/jarallax.js" %}"></script>
-  <script src="{% static "home/css/assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js" %}"></script>
-  <script src="{% static "home/css/assets/masonry/masonry.pkgd.min.js" %}"></script>
-  <script src="{% static "home/css/assets/imagesloaded/imagesloaded.pkgd.min.js" %}"></script>
-  <script src="{% static "home/css/assets/social-likes/social-likes.js" %}"></script>
-  <script src="{% static "home/css/assets/mobirise/js/script.js" %}"></script>
-  <script src="{% static "home/css/assets/mobirise-gallery/script.js" %}"></script>
-  <script type="text/javascript" src="{% static "home/js/jquery.alsEN-1.0.min.js" %}"></script>
-
-<script type="text/javascript">
-$(document).ready(function()
-{
-    $(".portfolio-item").click(function(){
-      $(this).toggleClass("checkbox_toggle");
-    });
-
-    $("#lista1").als({
-        visible_items: 3,
-        scrolling_items: 1,
-        orientation: "horizontal",
-        circular: "yes",
-        autoscroll: "no",
-        interval: 5000,
-        direction: "right"
-    });
-
-    //logo hover
-    $("#logo_img").hover(function()
-    {
-        $(this).attr("src","images/als_logo_hover212x110.png");
-    },function()
-    {
-        $(this).attr("src","images/als_logo212x110.png");
-    });
-
-    //logo click
-    $("#logo_img").click(function()
-    {
-        location.href = "http://als.musings.it/index.php";
-    });
-
-    $("a[href^='http://']").attr("target","_blank");
-    $("a[href^='http://als']").attr("target","_self");
-});
-</script>
-
+<script src="{% static "home/css/assets/jquery/jquery.min.js" %}"></script>
+<script src="{% static "home/css/assets/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "home/css/assets/smooth-scroll/SmoothScroll.js" %}"></script>
+<script src="{% static "home/css/assets/jarallax/jarallax.js" %}"></script>
+<script src="{% static "home/css/assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js" %}"></script>
+<script src="{% static "home/css/assets/masonry/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "home/css/assets/imagesloaded/imagesloaded.pkgd.min.js" %}"></script>
+<script src="{% static "home/css/assets/social-likes/social-likes.js" %}"></script>
+<script src="{% static "home/css/assets/mobirise/js/script.js" %}"></script>
+<script src="{% static "home/css/assets/mobirise-gallery/script.js" %}"></script>
+<script type="text/javascript" src="{% static "home/js/jquery.alsEN-1.0.min.js" %}"></script>
+<script type="text/javascript" src="{% static "home/js/als.js" %}"></script>
+<script type="text/javascript" src="{% static "home/js/start.js" %}"></script>
   
 </body>
 </html>

@@ -15,6 +15,7 @@ SIZE_CHOICES = (
 	)
 
 class Start(models.Model):
+	curriculum = models.CharField(max_length=20, null=True)
 	style_1_1 = models.CharField(max_length=20, null=True)
 	style_1_2 = models.CharField(max_length=20, null=True)
 	style_1_3 = models.CharField(max_length=20, null=True)
@@ -22,7 +23,14 @@ class Start(models.Model):
 	style_3 = models.CharField(max_length=40, null=True)
 	style_4 = models.CharField(max_length=10, null=True)
 	style_5 = models.CharField(max_length=100, null=True)
-	style_6 = models.CharField(max_length=100, null=True)
+	style_6 = models.CharField(max_length=60, null=True)
+	style_7 = models.CharField(max_length=20, null=True)
+	style_8 = models.CharField(max_length=40, null=True)
+	style_9 = models.CharField(max_length=10, null=True)
+	style_10 = models.CharField(max_length=100, null=True)
+	style_11 = models.CharField(max_length=100, null=True)
+	height = models.CharField(max_length=10, null=True)
+	weight = models.CharField(max_length=10, null=True)
 	size_top = models.CharField(max_length=6, choices=SIZE_CHOICES, default='M')
 	size_bottom = models.CharField(max_length=6, choices = SIZE_CHOICES, default = 'M')
 	kakao = models.CharField(max_length=100)

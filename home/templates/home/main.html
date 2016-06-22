@@ -7,6 +7,14 @@
 {% endblock %}
 {% block content %}
 
+{% if messages %}
+    {% for message in messages %}
+    <script type="text/javascript">
+        alert( "{{ message }}" );
+    </script>
+    {% endfor %}
+{% endif %}
+
 <section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background mbr-after-navbar" id="header1-73" style="background-image: url({% static "home/css/assets/images/" %}); ">
     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left">
         <div class="mbr-overlay" style="opacity: 1; background-color: #888888;"></div>
@@ -21,7 +29,7 @@
                             <strong>브리클로는 바로 당신을 위한 서비스 입니다.</strong> <br></p>
                     </div>
                     <div class="mbr-buttons btn-inverse mbr-buttons--left">
-                        <a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-warning" href="{% url "home:start" %}">신청하기</a> 
+                        <a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-warning" href="/#get_started" >신청하기</a> 
                         <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="/#how_it_works">이용방법</a></div>
                 </div></div>
             </div></div>
@@ -236,10 +244,6 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="{% static "home/css/assets/map/map.js" %}"></script>
-{% if messages %}
-<script type="text/javascript">
-    alert("신청이 완료되었습니다. 감사합니다.");
-</script>
-{% endif %}
+<script src="{% static "https://maps.googleapis.com/maps/api/js" %}"></script>
 
 {% endblock content %}
