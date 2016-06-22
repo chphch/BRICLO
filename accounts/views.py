@@ -20,8 +20,8 @@ def signup(request):
                     username=form.cleaned_data['username'],
                     password=form.cleaned_data['password1'])
                 login(request, authenticated_user)
-                messages.success(request, '환영합니다. ;)')
-                return redirect('/')
+                messages.success(request, '환영합니다!')
+                return redirect('accounts.views.profile')
         else:
             form = SignupForm()
         return render(request, 'accounts/signup.html', {'form': form, })
@@ -32,11 +32,16 @@ def signup(request):
 @login_required
 def profile(request):
     user = get_object_or_404(User, pk=request.user.pk)
-    expiration_date = get_object_or_404(User, pk=request.user.pk).start.expiration_date
-    expiration_date = expiration_date.replace(tzinfo=None)
-    now_time = datetime.datetime.now()
-    remaining_time = expiration_date - now_time
-    expiration_date = expiration_date.strftime("20%y.%m.%d.")
+    if request.user.start.exists():
+        expiration_date = get_object_or_404(User, pk=request.user.pk).start.expiration_date
+        expiration_date = expiration_date.replace(tzinfo=None)
+        now_time = datetime.datetime.now()
+        remaining_time = expiration_date - now_time
+        remaining_time = str(remaining_time.days) + "일"
+        expiration_date = expiration_date.strftime("20%y.%m.%d.")
+    else:
+        remaining_time = "--"
+        expiration_date = "--"
     return render(request, 'accounts/profile.html', {'user': user, 'remaining_time':remaining_time, 'expiration_date':expiration_date,})
 
 @login_required
