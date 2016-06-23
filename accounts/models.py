@@ -19,7 +19,6 @@ SIZE_CHOICES = (
 
 
 class Profile(models.Model):
-    address = models.CharField(max_length=300)
     gender= models.CharField(max_length=6, choices = GENDER_CHOICES, default='MEN')
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=40,null=True)

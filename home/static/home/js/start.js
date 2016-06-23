@@ -1,6 +1,3 @@
-$(".checkbox").click(function(){
-	$(this).toggleClass("checkbox_toggle");
-});
 $("#button_next_1").click(function(){
 	$(".page1").css("display","none")
 	$(".page2").css("display","block");

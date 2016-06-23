@@ -51,7 +51,8 @@ def profile_update(request):
         form = UpdateForm(request.POST, instance=user.profile)
         if form.is_valid():
             form.save()
-            messages.info(request,'msg')
+            messages.info(request,'수정된 회원정보가 저장되었습니다!')
+            return redirect('accounts.views.profile')
     else:
         form = UpdateForm(instance=user.profile)
     return render(request, 'accounts/profile_update.html', {'user':user,'form':form,})

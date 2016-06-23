@@ -43,6 +43,6 @@ class Start(models.Model):
 	name = models.CharField(max_length=40, null=True)
 
 	def __str__(self):
-		expiration_date = self.expiration_date.replace(tzinfo=None).strftime("20%y.%m.%d.")
-		return self.expiration_date
+		expiration_date = str(self.expiration_date.replace(tzinfo=None).strftime("20%y.%m.%d."))
+		return expiration_date
 

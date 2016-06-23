@@ -32,7 +32,6 @@ class SignupForm(UserCreationForm):
     name = forms.CharField(label='이름')
     email = forms.EmailField(label='이메일')   
     phone = forms.CharField(label='휴대폰 번호', widget=forms.TextInput(attrs={'placeholder': 'ex) 010-1234-5678'}), validators=[phone_validator])
-    address = forms.CharField(label='주소')
     gender= forms.ChoiceField(label='성별', choices = GENDER_CHOICES)
     is_agree = forms.BooleanField(label='약관동의', error_messages={
         'required' : '약관동의를 해주셔야 가입이 됩니다.',
@@ -47,7 +46,6 @@ class SignupForm(UserCreationForm):
         if commit:
             user.save()
             user.profile.name = self.cleaned_data['name']
-            user.profile.address = self.cleaned_data['address']
             user.profile.gender = self.cleaned_data['gender']
             user.profile.email = self.cleaned_data['email']
             user.profile.phone = self.cleaned_data['phone']
@@ -64,7 +62,7 @@ class UpdateForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ('email','name','gender', 'address', 'phone',)
+        fields = ('email','name','gender', 'phone',)
 
 
 class PassChangeForm(PasswordChangeForm):
