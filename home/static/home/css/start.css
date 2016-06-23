@@ -5,11 +5,15 @@
 @media (min-width: 768px){
 	.col-sm-offset-8 {
 	    margin-left:0;
+	    padding-left:;
 	}
-}
-@media (min-width: 768px){
-	.col-sm-8 {
-	    width: 100%;
+	.col-sm-offset-2 {
+		margin-left:35%;
+		margin-top:3%;
+	}
+	.col-sm-offset-5 {
+		margin-top:3%;
+		margin-left:33%;
 	}
 }
 @media (min-width: 992px) {
@@ -44,10 +48,6 @@ h3 {
 .page3 {
 	display:none;
 }
-.radiobox img {
-	width:100%;
-	height:100%;
-}
 label:hover {
 	opacity:0.5 !important;
 }
@@ -65,7 +65,7 @@ input:checked + label {
 	width:100%;
 }
 .portfolio-item input {
-	display:block;
+	display:none;
 }
 .page2 .checkbox {
 	height:50px;
