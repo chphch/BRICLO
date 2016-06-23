@@ -24,7 +24,7 @@
 
         <br/>
 
-        <p class="lead text-align-center" style="margin-left:34%; margin-bottom:20%;font-size: 250%">BRICLO</p>
+        <a href="{% url "main" %}" style="text-decoration-line: none"><p class="lead text-align-center" style="margin-left:31%; margin-bottom:20%;font-size: 250%">BRICLO</p></a>
         <p class="lead text-align-center" style="margin-left:40%"><strong>로그인</strong></p>
         <form method="post" action="">{% csrf_token %}
             {% bootstrap_form form %}
