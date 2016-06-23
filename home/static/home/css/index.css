@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+.question-col-1{
+	width:100px;
+}
+.btn-default{
+	height: auto;
+}
+#question-text{
+	width: 259px;
+	white-space:normal;
+}
+
+}

@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+	.mbr-navbar__brand-link::after, .mbr-navbar__brand-img {
+    height: 40px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    display: none;
+}
+.mbr-hero__text{
+	font-size: 28px;
+}
+#stylist, #footer1, #footer1-91, #als-viewport_0, #lista1, #content {
+	display: none;
+}
+.mbr-header__text{
+	font-size:17px;
+}
+.div-content{
+	font-size:14px;
+
+}
+.col-md-12 btn btn-default{
+	width: 100%
+}
+.question-col-1{
+	width:30px !important;
+	}
+#howtitle {
+	padding-top:10px;
+}
+#howtitle-content{
+	font-size: 25px;
+	margin-top:25px;
+}
+#lista1{
+	display: none;
+}
+
+}

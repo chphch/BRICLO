@@ -62,6 +62,9 @@ h3 {
 #whatisb {
   text-align:center;
 }
+#howtitle {
+  text-align:center; font-size:200%;padding:30px;  height:100px;
+}
 /* HOW IT WORKS */
 .mbr-box--fixed {
   height:100%;
