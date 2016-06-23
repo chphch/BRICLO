@@ -18,25 +18,27 @@
 	.page2 .row {
 		padding-left:10% !important;
 	}
+	.page3 .row {
+		padding-left:10% !important;
+	}
 }
 .page1 {
 	display:block;
 }
-/*.page2 {
+.page2 {
 	display:none;
 }
 .page3 {
 	display:none;
-}*/
+}
 .radiobox img {
 	width:100%;
 	height:100%;
 }
-input[type=checkbox]:checked + label {
+label:hover {
 	opacity:0.5 !important;
-	border:blue 5px solid !important;
 }
-input[type=radio]:checked + label {
+input:checked + label {
 	opacity:0.5 !important;
 	border:blue 5px solid !important;
 }
@@ -45,11 +47,11 @@ input[type=radio]:checked + label {
 	border-radius:5px;
 	margin:5px;
 }
-.page1 .checkbox img {
+.checkbox img {
 	height:100%;
 	width:100%;
 }
-.row .portfolio-item input {
+.portfolio-item input {
 	display:block;
 }
 .page2 .checkbox {
@@ -57,7 +59,8 @@ input[type=radio]:checked + label {
 	width:100px;
 	margin:10px;
 }
-.page2 .checkbox img {
-	height:100%;
-	width:100%;
+.page3 .checkbox {
+	height:50px;
+	width:100px;
+	margin:10px;
 }

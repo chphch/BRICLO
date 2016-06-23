@@ -15,6 +15,10 @@ SIZE_CHOICES = (
 	('XXL','XXL'),
 	('XXXL','XXXL'),
 	)
+DELIVERY_CHOICES = (
+	('yes','yes'),
+	('no','no'),
+	)
 
 class Start(models.Model):
 	style_1_1 = models.CharField(max_length=20, null=True, blank=True)
@@ -30,6 +34,7 @@ class Start(models.Model):
 	style_9 = models.CharField(max_length=10, null=True, blank=True)
 	style_10 = models.CharField(max_length=100, null=True, blank=True)
 	style_11 = models.CharField(max_length=100, null=True, blank=True)
+	style_12 = models.CharField(max_length=100, null=True, blank=True)
 	height = models.CharField(max_length=10)
 	weight = models.CharField(max_length=10)
 	curriculum = models.CharField(max_length=20)
@@ -37,6 +42,7 @@ class Start(models.Model):
 	size_bottom = models.CharField(max_length=6, choices = SIZE_CHOICES, default = 'M')
 	kakao = models.CharField(max_length=100)
 	address = models.TextField()
+	delivery = models.CharField(max_length=6, choices=DELIVERY_CHOICES, default='yes')
 	created_date = models.DateTimeField(default=datetime.datetime.now())
 	expiration_date = models.DateTimeField(default=datetime.datetime.now().replace(tzinfo=None)+timedelta(days=30))
 	user = models.ForeignKey(User, related_name='start',null=True)

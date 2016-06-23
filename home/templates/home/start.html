@@ -12,6 +12,7 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div class="page1">
+
             <div class="formtitle" style="margin-bottom:30px">
                 <h3><span style="">1 - 1<span> 마음에 드는 스타일을 모두 선택해주세요!</h3>
                 <h3>1. SIMPLE</h3>
@@ -121,13 +122,14 @@
         </div>
 
         <div class="page2">
+
             <div class="formtitle">
                 <h3><span style="">2<span>평상시 어떤 코디를 선호하시나요?</h3>
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_2" id="sytle_2_1" value="simple"></input>
-                    <label class="checkbox" for="style_2_1"><img src="{% static "home/images/rent-350x350.png" %}"></label>  
+                    <input type="checkbox" name="style_2" id="style_2_1" value="simple"></input>
+                    <label class="checkbox" for="style_2_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
                     <input type="checkbox" name="style_2" id="style_2_2" value="fancy"></input>
@@ -140,16 +142,20 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_3" value="school">학교갈 때</input>
+                    <input type="checkbox" name="style_3" id="style_3_1" value="school"></input>
+                    <label class="checkbox" for="style_3_1"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_3" value="event">특별한 행사</input>
+                    <input type="checkbox" name="style_3" id="style_3_2" value="event"></input>
+                    <label class="checkbox" for="style_3_2"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_3" value="meeting">소개팅 / 미팅 / 각종 팅</input>
+                    <input type="checkbox" name="style_3" id="style_3_3" value="meeting"></input>
+                    <label class="checkbox" for="style_3_3"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_3" value="girlfriend">여자친구 만날 때</input>
+                    <input type="checkbox" name="style_3" id="style_3_4" value="girlfriend"></input>
+                    <label class="checkbox" for="style_3_4"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
             </div>
 
@@ -159,11 +165,11 @@
             <div class="row">
                 <div class="col-md-3 portfolio-item">
                     <input type="radio" name="style_4" id="style_4_1" value="yes">
-                    <label class="radiobox" for="style_4_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
+                    <label class="checkbox" for="style_4_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
                     <input type="radio" name="style_4" id="style_4_2" value="no">
-                    <label class="radiobox" for="style_4_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
+                    <label class="checkbox" for="style_4_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
             </div>
 
@@ -172,37 +178,48 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="graphic">그래픽디자인 티</input>
+                    <input type="checkbox" name="style_5" id="style_5_1" value="graphic"></input>
+                    <label class="checkbox" for="style_5_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="patternshrits">패턴셔츠</input>
+                    <input type="checkbox" name="style_5" id="style_5_2" value="patternshrits"></input>
+                    <label class="checkbox" for="style_5_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="cardigan">가디건</input>
+                    <input type="checkbox" name="style_5" id="style_5_3" value="cardigan"></input>
+                    <label class="checkbox" for="style_5_3"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="checkshirts">체크셔츠</input>
+                    <input type="checkbox" name="style_5" id="style_5_4" value="checkshirts"></input>
+                    <label class="checkbox" for="style_5_4"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="sleeveless">민소매</input>
+                    <input type="checkbox" name="style_5" id="style_5_5" value="sleeveless"></input>
+                    <label class="checkbox" for="style_5_5"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="shortT">반팔티</input>
+                    <input type="checkbox" name="style_5" id="style_5_6" value="shortT"></input>
+                    <label class="checkbox" for="style_5_6"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="longT">긴팔티</input>
+                    <input type="checkbox" name="style_5" id="style_5_7" value="longT"></input>
+                    <label class="checkbox" for="style_5_7"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="shortshirts">반팔셔츠</input>
+                    <input type="checkbox" name="style_5" id="style_5_8" value="shortshirts"></input>
+                    <label class="checkbox" for="style_5_8"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="longshirts">긴팔셔츠</input>
+                    <input type="checkbox" name="style_5" id="style_5_9" value="longshirts"></input>
+                    <label class="checkbox" for="style_5_9"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="Turtleneck">폴라티</input>
+                    <input type="checkbox" name="style_5" id="style_5_10" value="Turtleneck"></input>
+                    <label class="checkbox" for="style_5_10"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_5" value="overfit">오버핏</input>
+                    <input type="checkbox" name="style_5" id="style_5_11" value="overfit"></input>
+                    <label class="checkbox" for="style_5_11"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
             </div>
             
@@ -211,22 +228,28 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="shorts">반바지</input>
+                    <input type="checkbox" name="style_6" id="style_6_1" value="shorts"></input>
+                    <label class="checkbox" for="style_6_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="trousers">긴바지</input>
+                    <input type="checkbox" name="style_6" id="style_6_2" value="trousers"></input>
+                    <label class="checkbox" for="style_6_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="skinny">스키니</input>
+                    <input type="checkbox" name="style_6" id="style_6_3" value="skinny"></input>
+                    <label class="checkbox" for="style_6_3"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="bootscut">부츠컷</input>
+                    <input type="checkbox" name="style_6" id="style_6_4" value="bootscut"></input>
+                    <label class="checkbox" for="style_6_4"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="straight">일자컷</input>
+                    <input type="checkbox" name="style_6" id="style_6_5" value="straight"></input>
+                    <label class="checkbox" for="style_6_5"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_6" value="threequarter">칠부팬츠</input>
+                    <input type="checkbox" name="style_6" id="style_6_6" value="threequarter"></input>
+                    <label class="checkbox" for="style_6_6"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
             </div>
 
@@ -235,40 +258,52 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="black">검정</input>
+                    <input type="checkbox" name="style_7" id="style7_1" value="black"></input>
+                    <label class="checkbox" for="style7_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="white">하양</input>
+                    <input type="checkbox" name="style_7" id="style7_2" value="white"></input>
+                    <label class="checkbox" for="style7_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="grey">회색</input>
+                    <input type="checkbox" name="style_7" id="style7_3" value="grey"></input>
+                    <label class="checkbox" for="style7_3"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="yellow">노랑</input>
+                    <input type="checkbox" name="style_7" id="style7_4" value="yellow"></input>
+                    <label class="checkbox" for="style7_4"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="orange">주황</input>
+                    <input type="checkbox" name="style_7" id="style7_5" value="orange"></input>
+                    <label class="checkbox" for="style7_5"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="red">빨강</input>
+                    <input type="checkbox" name="style_7" id="style7_6" value="red"></input>
+                    <label class="checkbox" for="style7_6"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="blue">파랑</input>
+                    <input type="checkbox" name="style_7" id="style7_7" value="blue"></input>
+                    <label class="checkbox" for="style7_7"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="green">초록</input>
+                    <input type="checkbox" name="style_7" id="style7_8" value="green"></input>
+                    <label class="checkbox" for="style7_8"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="purple">보라</input>
+                    <input type="checkbox" name="style_7" id="style7_9" value="purple"></input>
+                    <label class="checkbox" for="style7_9"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="pink">분홍</input>
+                    <input type="checkbox" name="style_7" id="style7_10" value="pink"></input>
+                    <label class="checkbox" for="style7_10"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="brown">갈색</input>
+                    <input type="checkbox" name="style_7" id="style7_11" value="brown"></input>
+                    <label class="checkbox" for="style7_11"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_7" value="none">없음</input>
+                    <input type="checkbox" name="style_7" id="style7_12" value="none"></input>
+                    <label class="checkbox" for="style7_12"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
             </div>
 
@@ -277,64 +312,70 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="black">검정</input>
+                    <input type="checkbox" name="style_8" id="style_8_1" value="black"></input>
+                    <label class="checkbox" for="style_8_1"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="white">하양</input>
+                    <input type="checkbox" name="style_8" id="style_8_2" value="white"></input>
+                    <label class="checkbox" for="style_8_2"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="grey">회색</input>
+                    <input type="checkbox" name="style_8" id="style_8_3" value="grey"></input>
+                    <label class="checkbox" for="style_8_3"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="yellow">노랑</input>
+                    <input type="checkbox" name="style_8" id="style_8_4" value="yellow"></input>
+                    <label class="checkbox" for="style_8_4"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="orange">주황</input>
+                    <input type="checkbox" name="style_8" id="style_8_5" value="orange"></input>
+                    <label class="checkbox" for="style_8_5"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="red">빨강</input>
+                    <input type="checkbox" name="style_8" id="style_8_6" value="red"></input>
+                    <label class="checkbox" for="style_8_6"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="blue">파랑</input>
+                    <input type="checkbox" name="style_8" id="style_8_7" value="blue"></input>
+                    <label class="checkbox" for="style_8_7"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="green">초록</input>
+                    <input type="checkbox" name="style_8" id="style_8_8" value="green"></input>
+                    <label class="checkbox" for="style_8_8"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="purple">보라</input>
+                    <input type="checkbox" name="style_8" id="style_8_9" value="purple"></input>
+                    <label class="checkbox" for="style_8_9"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="pink">분홍</input>
+                    <input type="checkbox" name="style_8" id="style_8_10" value="pink"></input>
+                    <label class="checkbox" for="style_8_10"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="brown">갈색</input>
+                    <input type="checkbox" name="style_8" id="style_8_11" value="brown"></input>
+                    <label class="checkbox" for="style_8_11"><img src="{% static "home/images/rent-350x350.png" %}"></label> 
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_8" value="none">없음</input>
+                    <input type="checkbox" name="style_8" id="style_8_12" value="none"></input>
+                    <label class="checkbox" for="style_8_12"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
             </div>          
 
             <div class="formtitle">
-                <h3><span style="">9<span>어느 정도의 색감을 선호하시네요</h3>
+                <h3><span style="">9<span>어떤 색감을 선호하세요?</h3>
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_9" value="pastel">
-                        <img src="{% static "home/images/rent-350x350.png" %}">
-                        <p>파스텔톤</p>
-                    </input>
+                    <input type="checkbox" name="style_9" id="style_9_1" value="pastel"></input>
+                    <label class="checkbox" for="style_9_1"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_9" value="original">
-                        <img src="{% static "home/images/rent-350x350.png" %}">
-                        <p>원색</p>
-                    </input>
+                    <input type="checkbox" name="style_9" id="style_9_2" value="original"></input>
+                    <label class="checkbox" for="style_9_2"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_9" value="mono">
-                        <img src="{% static "home/images/rent-350x350.png" %}">
-                        <p>모노톤</p>
-                    </input>
+                    <input type="checkbox" name="style_9" id="style_9_3" value="mono"></input>
+                    <label class="checkbox" for="style_9_3"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
             </div>
 
@@ -343,98 +384,46 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="flower">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>플라워</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_1" value="flower"></input>
+                    <label class="checkbox" for="style_10_1"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="paisley">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>페이즐리</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_2" value="paisley"></input>
+                    <label class="checkbox" for="style_10_2"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="check">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>체크</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_3" value="check"></input>
+                    <label class="checkbox" for="style_10_3"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="dot">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>도트</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_4" value="dot"></input>
+                    <label class="checkbox" for="style_10_4"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="stripe">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>스트라이프</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_5" value="stripe"></input>
+                    <label class="checkbox" for="style_10_5"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="animal">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>애니멀</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_6" value="animal"></input>
+                    <label class="checkbox" for="style_10_6"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="geometrical">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>기하학</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_7" value="geometrical"></input>
+                    <label class="checkbox" for="style_10_7"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="camouflage">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>카모플라쥬</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_8" value="camouflage"></input>
+                    <label class="checkbox" for="style_10_8"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_10" value="none">
-                        <div class="checkleft">
-                            <img src="{% static "home/images/rent-350x350.png" %}">
-                        </div>
-                        <div class="checkright">
-                            <p>없음</p>
-                        </div>
-                    </input>
+                    <input type="checkbox" name="style_10" id="style_10_9" value="none"></input>
+                    <label class="checkbox" for="style_10_9"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
             </div>
 
             <div class="row">
+                <button type=button class="btn_default btn" id="button_before_2">이전 페이지로 돌아가기
+                </button>
                 <button type=button class="btn_default btn" id="button_next_2">다음 페이지로 넘어가기
                 </button>
             </div>
@@ -446,67 +435,105 @@
             </div>
             <div class="row">
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="smallstature">
-                            <p>작은키</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_1" value="smallstature"></input>
+                    <label class="checkbox" for="style_11_1"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="greatstature">
-                            <p>큰키</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_2" value="greatstature"></input>
+                    <label class="checkbox" for="style_11_2"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="wideshoulder">
-                            <p>넓은 어깨</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_3" value="wideshoulder"></input>
+                    <label class="checkbox" for="style_11_3"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="narrowshoulder">
-                            <p>좁은 어깨</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_4" value="narrowshoulder"></input>
+                    <label class="checkbox" for="style_11_4"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="thickforearm">
-                            <p>굵은 팔뚝</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_5" value="thickforearm"></input>
+                    <label class="checkbox" for="style_11_5"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="bigchest">
-                            <p>큰 가슴</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_6" value="bigchest"></input>
+                    <label class="checkbox" for="style_11_6"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="smallchest">
-                            <p>작은 가슴</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_7" value="smallchest"></input>
+                    <label class="checkbox" for="style_11_7"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="waist">
-                            <p>허리</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_8" value="waist"></input>
+                    <label class="checkbox" for="style_11_8"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="thinthigh">
-                            <p>얇은 허벅지</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_9" value="thinthigh"></input>
+                    <label class="checkbox" for="style_11_9"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="thickthigh">
-                            <p>굵은 허벅지</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_10" value="thickthigh"></input>
+                    <label class="checkbox" for="style_11_10"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="bighips">
-                            <p>큰 엉덩이</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_11" value="bighips"></input>
+                    <label class="checkbox" for="style_11_11"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
                 <div class="col-md-3 portfolio-item">
-                    <input type="checkbox" name="style_11" value="smallhips">
-                            <p>작은 엉덩이</p>
-                    </input>
+                    <input type="checkbox" name="style_11" id="style_11_12" value="smallhips"></input>
+                    <label class="checkbox" for="style_11_12"><img src="{% static "home/images/rent-350x350.png" %}"></label>
                 </div>
             </div>
 
+            <div class="formtitle">
+                <h3><span style="">12<span>얼굴 색은 어떤 톤인가요?</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_1" value="1">
+                    <label class="checkbox" for="style_12_1"><img src="{% static "home/images/style_12_1.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_2" value="2">
+                    <label class="checkbox" for="style_12_2"><img src="{% static "home/images/style_12_2.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_3" value="3">
+                    <label class="checkbox" for="style_12_3"><img src="{% static "home/images/style_12_3.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_4" value="4">
+                    <label class="checkbox" for="style_12_4"><img src="{% static "home/images/style_12_4.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_5" value="5">
+                    <label class="checkbox" for="style_12_5"><img src="{% static "home/images/style_12_5.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_6" value="6">
+                    <label class="checkbox" for="style_12_6"><img src="{% static "home/images/style_12_6.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_7" value="7">
+                    <label class="checkbox" for="style_12_7"><img src="{% static "home/images/style_12_7.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_8" value="8">
+                    <label class="checkbox" for="style_12_8"><img src="{% static "home/images/style_12_8.jpg" %}"></label>
+                    </input>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <input type="checkbox" name="style_12" id="style_12_9" value="9">
+                    <label class="checkbox" for="style_12_9"><img src="{% static "home/images/style_12_9.jpg" %}"></label>
+                    </input>
+                </div>
+            </div>
 
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="form-group">
@@ -552,14 +579,21 @@
                     <textarea class="form-control" cols="40" id="id_address" name="address" placeholder="서울시 관악구" required="required" rows="10" title=""></textarea>
                 </div>
                 <div class="form-group">
+                    <label class="control-label" for="id_delivery">배송 받을 곳에 택배를 보관할 만한 장소가 있습니까?</label>
+                    <select class="form-control" id="id_delivery" name="delivery" required="required" title="">
+                        <option value="no" selected="selected">네(기숙사 물품보관소, 자취방 경비실 등)</option>
+                        <option value="yes">아니오</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type=button class="btn_default btn" id="button_before_3">이전 페이지로 돌아가기
+                    </button>
                     <button type="submit" class="btn btn-primary pull-right">
-                    <span class="glyphicon glyphicon-ok-sign"></span>  시작하기</button>
+                    <span class="glyphicon glyphicon-ok-sign"></span>시작하기</button>
                 </div>
             </div>
         </div>
     </form>
 </div>
-
-
 
 {% endblock content %}
