@@ -9,5 +9,6 @@
 	width: 259px;
 	white-space:normal;
 }
-
+.btn {
+	font-weight:bold !important;
 }

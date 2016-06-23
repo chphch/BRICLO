@@ -1,3 +1,7 @@
+@font-face {
+	font-family:'SeoulNamsanL';
+	src: url(../fonts/SeoulNamsanL.ttf) format('truetype');
+}
 @media (min-width: 768px){
 	.col-sm-offset-8 {
 	    margin-left:0;
@@ -23,7 +27,13 @@
 	}
 }
 h3 {
-	
+	font-family:'SeoulNamsanL';
+	text-decoration:underline;
+	color:#519AD6 !important;
+}
+.h31 {
+	color:black !important;
+	text-decoration:none !important;
 }
 .page1 {
 	display:block;
