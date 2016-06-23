@@ -33,7 +33,7 @@ def signup(request):
 def profile(request):
     user = get_object_or_404(User, pk=request.user.pk)
     if request.user.start.exists():
-        expiration_date = get_object_or_404(User, pk=request.user.pk).start.expiration_date
+        expiration_date = request.user.start.get().expiration_date
         expiration_date = expiration_date.replace(tzinfo=None)
         now_time = datetime.datetime.now()
         remaining_time = expiration_date - now_time
