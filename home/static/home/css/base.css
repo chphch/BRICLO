@@ -16,23 +16,17 @@
 }
 .div-content{
 	font-size:14px;
-
 }
-.col-md-12 btn btn-default{
+.col-md-12 .btn btn-default{
 	width: 100%
 }
-.question-col-1{
-	width:30px !important;
-	}
 #howtitle {
-	padding-top:10px;
+	padding-top:10%;
 }
 #howtitle-content{
 	font-size: 25px;
-	margin-top:25px;
+	margin-top:0;
 }
 #lista1{
 	display: none;
-}
-
 }
