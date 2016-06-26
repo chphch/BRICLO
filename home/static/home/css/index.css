@@ -1,14 +1,16 @@
 @media (max-width: 768px) {
 .question-col-1{
-	width:100px;
-}
-.btn-default{
-	height: auto;
+	width:90%;
 }
 #question-text{
-	width: 259px;
+	width: auto;
 	white-space:normal;
+    text-indent: -1em;
+    margin-left: 1em;
 }
-.btn {
-	font-weight:bold !important;
+.btn-default {
+	width:95% !important;
+	text-align:auto;
+	height:auto !important;
+	margin-top:1em;
 }

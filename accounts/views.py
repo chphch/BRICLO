@@ -20,8 +20,8 @@ def signup(request):
                     username=form.cleaned_data['username'],
                     password=form.cleaned_data['password1'])
                 login(request, authenticated_user)
-                messages.success(request, '환영합니다!')
-                return redirect('accounts.views.profile')
+                messages.success(request, '환영합니다. ;)')
+                return redirect('/')
         else:
             form = SignupForm()
         return render(request, 'accounts/signup.html', {'form': form, })
@@ -56,4 +56,3 @@ def profile_update(request):
     else:
         form = UpdateForm(instance=user.profile)
     return render(request, 'accounts/profile_update.html', {'user':user,'form':form,})
-

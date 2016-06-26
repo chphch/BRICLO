@@ -2,21 +2,130 @@
 	font-family:'SeoulNamsanL';
 	src: url(../fonts/SeoulNamsanL.ttf) format('truetype');
 }
+@media (max-width: 768px){
+	.page1 {
+		width:100%;
+		margin-top:100px;
+	}
+	.page2 {
+		margin-top:100px;
+		margin-bottom:100px;
+	}
+	.page3 {
+		margin-top:100px;
+		margin-bottom:100px;
+	}
+	.page1 .col-md-3 {
+		width:80%;
+		height:auto;
+		margin-left:10%;
+	}
+	.page2 .portfolio-item {
+		width:20%;
+		float:left;
+	}
+	.page2 .row {
+		padding-left:5% !important;
+		padding-right:5% !important;
+	}
+	.page3 .row {
+		padding-left:5% !important;
+		padding-right:5% !important;
+	}
+	.rowtext .portfolio-item {
+		width:20%;
+		margin:5px;
+		float:left;
+	}
+	.row_color2 .portfolio-item {
+		width:23%;
+		margin:3%;
+		float:left;
+	}
+	.col-md-offset-4 {
+		clear:both;
+	}
+	.formtitle {
+		width:90%;
+		margin-left:5%;
+	}
+	#button_next_1 {
+		margin-left:30%;
+		margin-bottom:10%;
+		width:40%;
+		margin-top:3%;
+		height:auto;
+	}
+	#button_next_2 {
+		width:40%;
+		margin-left:5%;
+	}
+	#button_before_2 {
+		width:40%;
+	}
+	.page2 .col-md-offset-5 {
+		margin-left:10%;
+	}
+}
 @media (min-width: 768px){
-	.col-sm-offset-8 {
+	.page1 {
+		margin-top:130px;
+		margin-bottom:100px;
+	}
+	.page2 {
+		margin-top:130px;
+		margin-bottom:200px;
+	}
+	.page3 {
+		margin-top:130px;
+		margin-bottom:1100px;
+	}
+	.col-md-offset-8 {
 	    margin-left:0;
 	    padding-left:;
 	}
-	.col-sm-offset-2 {
+	#button_next_1 {
+		margin-left:40%;
+		margin-top:1%;
+	}
+	.page1 .col-md-offset-2 {
+		margin-top:3%;
 		margin-left:35%;
-		margin-top:3%;
 	}
-	.col-sm-offset-5 {
-		margin-top:3%;
-		margin-left:33%;
+	.rowtext .portfolio-item {
+		height:30px;
+		float:left;
+		margin:10px;
 	}
-}
-@media (min-width: 992px) {
+	.row_color .portfolio-item {
+		height:auto;
+		width:130px;
+		float:left;
+		margin:10px;
+	}
+	.row_color2 .portfolio-item {
+		height:auto;
+		width:auto;
+		float:left;
+		margin:8px;
+	}
+	.row_color2 label {
+		width:150px !important;
+	}
+	.row_10 .portfolio-item {
+		height:auto;
+		width:90px;
+		margin:10px;
+		float:left;
+	}
+	.page2 .col-md-offset-5 {
+		margin-top:3%;
+		margin-left:35%;
+	}
+	.page2 .col-md-offset-5 button {
+		float:left;
+		margin:3%;
+	}
 	.formtitle {
 		padding-left:13%;
 	}
@@ -25,54 +134,70 @@
 	}
 	.page2 .row {
 		padding-left:10% !important;
+		padding-right:10% !important;
 	}
 	.page3 .row {
 		padding-left:10% !important;
+		padding-right:10% !important;
+	}
+	.col-md-offset-4 {
+		margin-top:30px;
 	}
 }
 h3 {
 	font-family:'SeoulNamsanL';
 	text-decoration:underline;
 	color:#519AD6 !important;
+	text-indent:-1em;
+	margin-left:1em;
 }
 .h31 {
 	color:black !important;
 	text-decoration:none !important;
 }
 .page1 {
-	display:block;
+	display:none;
 }
 .page2 {
-	display:none;
+	display:block;
 }
 .page3 {
 	display:none;
 }
 label:hover {
-	opacity:0.5 !important;
+	opacity:0.8 !important;
 }
 input:checked + label {
-	opacity:0.5 !important;
-	border:blue 5px solid !important;
+	border-color:rgba(0,150,200,1) !important;
+	border-width:2px !important;
+}
+input:checked + label img {
+	opacity:0.5;
 }
 .page1 .checkbox {
 	border:1px black solid;
 	border-radius:5px;
 	margin:5px;
 }
+.checkbox {
+	height:100%;
+	width:100%;
+}
 .checkbox img {
 	height:100%;
 	width:100%;
+}
+.portfolio-item {
+	padding:0;
 }
 .portfolio-item input {
 	display:none;
 }
 .page2 .checkbox {
-	height:50px;
-	width:100px;
-	margin:10px;
+	border:solid 0px white;
 }
 .page3 .checkbox {
+	border:solid 0px white;
 	height:50px;
 	width:100px;
 	margin:10px;

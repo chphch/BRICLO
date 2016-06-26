@@ -27,10 +27,6 @@ h3 {
   margin:0 0 0 0 !important;
   padding:0 0 0 0 !important;
 }
-.container {
-  padding-left:5%;
-  padding-right:5%;
-}
 /* MAIN */
 .mbr-section {
   margin:0;
@@ -104,6 +100,9 @@ h3 {
 #lista1 {
   margin:0 !important;
   height:500px !important;
+}
+#lista1 span {
+  top:130px !important;
 }
 #als-wrapper_0 {
   height:500px !important;

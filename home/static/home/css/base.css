@@ -1,3 +1,9 @@
+#menu-74 .mbr-navbar__items a {
+	font-weight:bold !important;
+}
+.mbr-navbar__hamburger {
+	right:2rem;
+}
 @media (max-width: 768px) {
 	.mbr-navbar__brand-link::after, .mbr-navbar__brand-img {
     height: 40px;
