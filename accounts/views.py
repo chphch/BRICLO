@@ -32,7 +32,7 @@ def signup(request):
 @login_required
 def profile(request):
     user = get_object_or_404(User, pk=request.user.pk)
-    if request.user.start.exists():
+    if request.user.start.exists() and request.user.start.get().expiration_date is not None:
         expiration_date = request.user.start.get().expiration_date
         expiration_date = expiration_date.replace(tzinfo=None)
         now_time = datetime.datetime.now()

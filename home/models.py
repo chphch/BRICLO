@@ -44,11 +44,13 @@ class Start(models.Model):
 	address = models.TextField()
 	delivery = models.CharField(max_length=6, choices=DELIVERY_CHOICES, default='yes')
 	created_date = models.DateTimeField(default=datetime.datetime.now())
-	expiration_date = models.DateTimeField(default=datetime.datetime.now().replace(tzinfo=None)+timedelta(days=30))
+	expiration_date = models.DateTimeField(null=True)
 	user = models.ForeignKey(User, related_name='start',null=True)
 	name = models.CharField(max_length=40, null=True)
 
 	def __str__(self):
-		expiration_date = str(self.expiration_date.replace(tzinfo=None).strftime("20%y.%m.%d."))
-		return expiration_date
-
+		if self.expiration_date is None:
+			string = "ordered at : " + str(self.created_date.replace(tzinfo=None).strftime("20%y.%m.%d.")) + str(self.name) + str(self.user.username)
+		else:
+			string = "expiring at : " + str(self.expiration_date.replace(tzinfo=None).strftime("20%y.%m.%d.")) + str(self.name) +str(self.user.username)
+		return string

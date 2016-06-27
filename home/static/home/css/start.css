@@ -240,24 +240,24 @@ h3 {
 	text-decoration:none !important;
 }
 .page1 {
-	display:none;
+	display:block;
 }
 .page2 {
-	display:block;
+	display:none;
 }
 .page3 {
-	display:block;
+	display:none;
 }
 label:hover {
 	opacity:0.8 !important;
 }
 input:checked + label {
 	border-color:rgba(0,150,200,1) !important;
-	border-width:1px !important;
+	border-width:2px !important;
 	border-radius:3px;
 }
 input:checked + label img {
-	opacity:0.8;
+	opacity:0.6;
 }
 .page1 .checkbox {
 	border:1px black solid;

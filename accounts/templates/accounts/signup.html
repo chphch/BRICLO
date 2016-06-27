@@ -17,7 +17,7 @@
     font-size : 180%;
 }
 .col_left {
-    margin-left:13%;
+    margin-left:30%;
     float:left;
 }
 .col_right {
@@ -31,7 +31,7 @@
     height:300px;
     width:400px;
     border:0px solid black;
-    border-radius:2px;
+    border-radius:5px;
     background-color:rgb(200,200,200);
 }
 .col_left .checkbox:last-child{
@@ -50,12 +50,17 @@
     </div>
     <div class="col-sm-4 col-sm-offset-4 col_left">
         <form method="post" action="">{% csrf_token %}
-            {% bootstrap_form form %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %} 회원가입 </button>
+        {% endbuttons %}
     </div>
-    <div class="col-sm-4 col-sm-offset-4 col_right">
+    <!--<div class="col-sm-4 col-sm-offset-4 col_right">
         <div class="scrollbox">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            이용약관은 의류 파손 배상에 대한 내용입니다.<br>
+            이용약관 문의는 아래의 방법으로 해주세요 ~ !<br>
+            1. 카카오톡아이디 : Skywrace <br>
+            2. 페이스북 페이지 메세지 : Briclo
         </div>
         <div class="form-group">
             <div class="checkbox">
@@ -67,7 +72,7 @@
             <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %} 회원가입 </button>
         {% endbuttons %}
         </form>
-    </div>
+    </div>-->
 </div>
 
 

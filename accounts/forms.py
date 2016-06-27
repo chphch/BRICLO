@@ -41,9 +41,9 @@ class SignupForm(UserCreationForm):
     email = forms.EmailField(label='이메일')   
     phone = forms.CharField(label='휴대폰 번호', widget=forms.TextInput(attrs={'placeholder': 'ex) 010-1234-5678'}), validators=[phone_validator])
     gender= forms.ChoiceField(label='성별', choices = GENDER_CHOICES)
-    is_agree = forms.BooleanField(label='', error_messages={
-        'required' : '약관동의를 해주셔야 가입이 됩니다.',
-    })
+#    is_agree = forms.BooleanField(label='', error_messages={
+#       'required' : '약관동의를 해주셔야 가입이 됩니다.',
+#    })
     error_messages = {
         'password_mismatch': _("비밀번호가 일치하지 않습니다."),
     }
