@@ -26,17 +26,42 @@
 		padding-left:5% !important;
 		padding-right:5% !important;
 	}
-	.page3 .row {
+	.page3 .row:not(.style_11) {
 		padding-left:5% !important;
 		padding-right:5% !important;
+	}
+	.style_2 .portfolio-item:first-child {
+		margin-left:9%;
 	}
 	.rowtext .portfolio-item {
 		height:4rem;
 		margin:0;
 		float:left;
 	}
+	.row_color .portfolio-item {
+		height:10rem;
+		margin-left:0.5rem;
+		margin-right:0.5rem;
+		margin-bottom:0.5rem;
+		float:left;
+	}
 	.style_3_1 {
-		margin-left:-1rem !important;
+		margin-left:5% !important;
+	}
+	.style_3_2 {
+		margin-left:0% !important;
+	}
+	.style_3_3 {
+		margin-left:10% !important;
+	}
+	.style_3_4 {
+		margin-left:22% !important;
+	}
+	.style_4 > .portfolio-item:first-child {
+		margin-left:15%;
+	}
+	.style_11 {
+		padding-left:15% !important;
 	}
 	.rowtext .portfolio-item label {
 		width:auto;
@@ -46,9 +71,13 @@
 		width:auto;
 		height:100%;
 	}
-	.row_color .portfolio-item {
-		width:24%;
-		float:left;
+	.row_color .portfolio-item label {
+		width:auto;
+		height:100%;
+	}
+	.row_color .portfolio-item label img {
+		width:auto;
+		height:100%;
 	}
 	.row_color2 .portfolio-item {
 		width:23%;
@@ -195,10 +224,16 @@
 }
 h3 {
 	font-family:'SeoulNamsanL';
-	text-decoration:underline;
 	color:#519AD6 !important;
 	text-indent:-1em;
 	margin-left:1em;
+	line-height:1.5em !important;
+}
+.fontcolor {
+	color:#2f4f4f !important;
+}
+.underline {
+	color:none;
 }
 .h31 {
 	color:black !important;
@@ -211,7 +246,7 @@ h3 {
 	display:block;
 }
 .page3 {
-	display:none;
+	display:block;
 }
 label:hover {
 	opacity:0.8 !important;
