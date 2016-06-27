@@ -1,16 +1,20 @@
 @media (max-width: 768px) {
-.question-col-1{
-	width:90%;
+	.question-col-1{
+		width:90%;
+	}
+	#question-text{
+		width: auto;
+		white-space:normal;
+	    text-indent: -1em;
+	    margin-left: 1em;
+	}
+	.btn-default {
+		width:95% !important;
+		text-align:auto;
+		height:auto !important;
+		margin-top:1em;
+	}
 }
-#question-text{
-	width: auto;
-	white-space:normal;
-    text-indent: -1em;
-    margin-left: 1em;
-}
-.btn-default {
-	width:95% !important;
-	text-align:auto;
-	height:auto !important;
-	margin-top:1em;
+.col-md-12 {
+	background-color:rgba(176,224,230,0.3) !important;
 }

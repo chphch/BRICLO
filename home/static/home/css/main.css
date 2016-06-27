@@ -2,27 +2,6 @@
 h3 {
 	color:black !important;
 }
-/*navbar*/
-#menu-74.mbr-navbar--stuck .mbr-navbar__section {
-  background: rgba(180,180,180,0.8) !important;
-}
-#brand_logo_name img{
-  top:9%;
-  height:80% !important;
-}
-/*로고, 로고옆글씨 클때*/
-.mbr-navbar__brand-link:after,
-.mbr-navbar__brand-img {
-    height: 40px;
-    margin-left: 8px;
-}
-/* 로고옆 글씨 작을때 */
-.mbr-navbar--short .mbr-navbar__brand-link:after,
-.mbr-navbar--short .mbr-navbar__brand-img {
-    height: 30px;
-    margin-left:3px;
-}
-
 .row {
   margin:0 0 0 0 !important;
   padding:0 0 0 0 !important;
@@ -66,7 +45,7 @@ h3 {
   height:100%;
 }
 .mbr_contents{
-  height:25rem !important;
+  height:25rem;
 }
 .mbr-section__container--isolated {
     padding-bottom: 0px;
@@ -142,7 +121,7 @@ h3 {
 }
 @media (max-width: 480px) {
   #brand_logo_name{
-    visibility: hidden;
+    visibility: ;
   }
   .content-2 .thumbnail2 {
     padding-bottom: 70px;
